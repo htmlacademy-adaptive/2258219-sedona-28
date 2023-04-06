@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона. Форма отзыва</title>
+    <base href="https://htmlacademy-adaptive.github.io/2258219-sedona-28/2/">
+</head>
+
+  <body class="page_form form">
+    <!--PAGE HEADER-->
+    <h1 class="visually-hidden">Форма отзыва</h1>
+    <header class="page-header">
+      <nav class="page-header_nav navigation">
+        <h2 class="visually-hidden">Навигация</h2>
+        <a href="#"><img class="page-header_logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96"></a>
+
+        <label class="visually-hidden">Навигационное меню
+          <input class="" type="checkbox" name="hamburger">
+        </label>
+        <ul class="navigation_list nav-list">
+          <li class="nav-list_item"><a href="index.html">Главная</a></li>
+          <li class="nav-list_item"><a href="catalog.html">Фото и видео</a></li>
+          <li class="nav-list_item nav-list_item--current"><a>Форма отзыва</a></li>
+          <li class="nav-list_item"><a href="#">HTML Academy</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--MAIN CONTENT-->
+    <main class="form_page-main">
+      <section class="catalog_sedona sedona">
+        <img class="sedona-image" src="img/sedona.svg" alt="Sedona" width="229" height="39">
+        <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
+      </section>
+
+       <!--FORM-->
+       <section class="form">
+        <div class="form_introduction introduction">
+          <div class="introdaction-container">
+            <h2 class="form_title section-title">Оставьте свой отзыв</h2>
+            <p class="form_text section-text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          </div>
+        </div>
+
+        <form class="form_review-form review-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="review-form_group form-group form-group--name">
+            <legend class="form-group_title">Представьтесь:</legend>
+            <label class="form-group_label form-group_label--name">Имя*:
+              <input class="form-group_input form-group_input--name" type="text" name="author-name" placeholder="Имя" value="Пётр" required>
+            </label>
+
+            <label class="form-group_label form-group_label--name">Фамилия*:
+              <input class="form-group_input form-group_input--name" type="text" name="author-surname" placeholder="Фамилия" value="Пустота" required>
+            </label>
+
+            <label class="form-group_label form-group_label--name">Отчество:
+              <input class="form-group_input form-group_input--name" type="text" name="author-patronymic" placeholder="Отчество" value="Викторович">
+            </label>
+          </fieldset>
+
+          <fieldset class="review-form_group form-group form-group--contacts">
+            <legend class="form-group_title">Контактная информация:</legend>
+            <label class="form-group_label form-group_label--contacts">Контактный телефон*:
+              <input class="form-group_input form-group_input--contacts form-group_input--phone" type="tel" name="phone" placeholder="Введите телефон" required>
+            </label>
+
+            <label class="form-group_label form-group_label--contacts">Электронная почта*:
+              <input class="form-group_input form-group_input--contacts form-group_input--email" type="email" name="email" placeholder="Введите e-mail" required>
+            </label>
+          </fieldset>
+
+          <fieldset class="review-form_group form-group form-group--feelings">
+            <legend class="form-group_title">Ваше общее впечатление:</legend>
+            <label class="form-group_label form-group_label--feelings">
+              <input class="form-group_input form-group_input--feelings" type="radio" name="feelings" value="positive" checked>
+              Скорее положительное
+            </label>
+
+            <label class="form-group_label form-group_label--feelings">
+              <input class="form-group_input form-group_input--feelings" type="radio" name="feelings" value="negative">
+              Скорее отрицательное
+            </label>
+
+            <label class="form-group_label form-group_label--feelings">
+              <input class="form-group_input form-group_input--feelings" type="radio" name="feelings" value="unclear">
+              Затрудняюсь ответить
+            </label>
+          </fieldset>
+
+          <fieldset class="review-form_group form-group form-group--attractions">
+            <legend class="form-group_title">Посещенные достопримечательности:</legend>
+            <label class="form-group_label form-group_label--attractions">
+              <input class="form-group_input form-group_input--attractions" type="checkbox" name="devil-bridge" checked>
+              Мост Дьявола
+            </label>
+
+            <label class="form-group_label form-group_label--attractions">
+              <input class="form-group_input form-group_input--attractions" type="checkbox" name="ringbell-mountain" checked>
+              Гора-Колокол
+            </label>
+
+            <label class="form-group_label form-group_label--attractions">
+              <input class="form-group_input form-group_input--attractions" type="checkbox" name="slide-park" checked>
+              Слайд-парк
+            </label>
+
+            <label class="form-group_label form-group_label--attractions">
+              <input class="form-group_input form-group_input--attractions" type="checkbox" name="red-rocks">
+              Красные скалы
+            </label>
+          </fieldset>
+
+          <fieldset class="review-form_group form-group form-group--attractions">
+            <legend class="form-group_title">Опишите свои эмоции:</legend>
+            <textarea class="form-group_input form-group_input--text-area" name="review-comment" id="review-comment" placeholder="Опишите подробно все свои восторги" rows="5"></textarea>
+          </fieldset>
+
+          <button class="review-form_button button button--primary" type="submit">Отправить отзыв</button>
+          <span class="review-form_required-description">* — обязательные поля</span>
+        </form>
+      </section>
+    </main>
+
+    <!--PAGE FOOTER-->
+    <footer class="page-footer">
+      <span>#VISITSEDONA</span>
+
+      <div class="page-footer_socials">
+        <div class="page-footer_social-block social">
+          <svg class="social_icon social_icon--vk"></svg>
+        </div>
+
+        <div class="page-footer_social-block social">
+          <svg class="social_icon social_icon--tm"></svg>
+        </div>
+
+        <div class="page-footer_social-block social">
+          <svg class="social_icon social_icon--yt"></svg>
+        </div>
+      </div>
+
+      <svg class="page-footer_html-logo"></svg>
+    </footer>
+
+    <!--MODAL ERROR-->
+    <section class="form_modal-window modal-window modal-window--error">
+      <h2 class="modal-window_title section-title">Что-то пошло не так!</h2>
+      <p class="modal-window_text section-text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="modal-window_button button button--primary" type="button">ОК</button>
+    </section>
+
+    <!--MODAL SUCCESS-->
+    <section class="form_modal-window modal-window modal-window--succsess">
+      <h2 class="modal-window_title section-title">Ваш отзыв отправлен!</h2>
+      <p class="modal-window_text section-text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте</p>
+      <button class="modal-window_button button button--primary" type="button">Закрыть окно</button>
+    </section>
+
+  </body>
