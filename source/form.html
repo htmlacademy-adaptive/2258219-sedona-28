@@ -2,12 +2,12 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона. Фото и Видео</title>
+    <title>HTML Academy: Седона. Форма отзыва</title>
   </head>
 
   <body class="page_form form">
     <!--PAGE HEADER-->
-    <h1 class="visually-hidden">Галерея</h1>
+    <h1 class="visually-hidden">Форма отзыва</h1>
     <header class="page-header">
       <nav class="page-header_nav navigation">
         <h2 class="visually-hidden">Навигация</h2>
@@ -27,6 +27,92 @@
 
     <!--MAIN CONTENT-->
     <main class="form_page-main">
+
+       <!--FORM-->
+       <section class="form">
+        <div class="form_introduction introduction">
+          <div class="introdaction-container">
+            <h2 class="form_title section-title">Оставьте свой отзыв</h2>
+            <p class="form_text section-text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          </div>
+        </div>
+
+        <form class="form_review-form review-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="review-form_group form-group form-group--name">
+            <legend class="form-group_title">Представьтесь:</legend>
+            <label class="form-group_label form-group_label--name">Имя*:
+              <input class="form-group_input form-group_input--name" type="text" name="author-name" placeholder="Имя" value="Пётр" required>
+            </label>
+
+            <label class="form-group_label form-group_label--name">Фамилия*:
+              <input class="form-group_input form-group_input--name" type="text" name="author-surname" placeholder="Фамилия" value="Пустота" required>
+            </label>
+
+            <label class="form-group_label form-group_label--name">Отчество:
+              <input class="form-group_input form-group_input--name" type="text" name="author-patronymic" placeholder="Отчество" value="Викторович">
+            </label>
+          </fieldset>
+
+          <fieldset class="review-form_group form-group form-group--contacts">
+            <legend class="form-group_title">Контактная информация:</legend>
+            <label class="form-group_label form-group_label--contacts">Контактный телефон*:
+              <input class="form-group_input form-group_input--contacts form-group_input--phone" type="phone" name="phone" placeholder="Введите телефон" required>
+            </label>
+
+            <label class="form-group_label form-group_label--contacts">Электронная почта*:
+              <input class="form-group_input form-group_input--contacts form-group_input--email" type="email" name="email" placeholder="Введите e-mail" required>
+            </label>
+          </fieldset>
+
+          <fieldset class="review-form_group form-group form-group--feelings">
+            <legend class="form-group_title">Ваше общее впечатление:</legend>
+            <label class="form-group_label form-group_label--feelings">
+              <input class="form-group_input form-group_input--feelings" type="radio" name="feelings" value="positive" checked>
+              Скорее положительное
+            </label>
+
+            <label class="form-group_label form-group_label--feelings">
+              <input class="form-group_input form-group_input--feelings" type="radio" name="feelings" value="negative">
+              Скорее отрицательное
+            </label>
+
+            <label class="form-group_label form-group_label--feelings">
+              <input class="form-group_input form-group_input--feelings" type="radio" name="feelings" value="unclear">
+              Затрудняюсь ответить
+            </label>
+          </fieldset>
+
+          <fieldset class="review-form_group form-group form-group--attractions">
+            <legend class="form-group_title">Посещенные достопримечательности:</legend>
+            <label class="form-group_label form-group_label--attractions">
+              <input class="form-group_input form-group_input--attractions" type="checkbox" name="devil-bridge" checked>
+              Мост Дьявола
+            </label>
+
+            <label class="form-group_label form-group_label--attractions">
+              <input class="form-group_input form-group_input--attractions" type="checkbox" name="ringbell-mountain" checked>
+              Гора-Колокол
+            </label>
+
+            <label class="form-group_label form-group_label--attractions">
+              <input class="form-group_input form-group_input--attractions" type="checkbox" name="slide-park" checked>
+              Слайд-парк
+            </label>
+
+            <label class="form-group_label form-group_label--attractions">
+              <input class="form-group_input form-group_input--attractions" type="checkbox" name="red-rocks">
+              Красные скалы
+            </label>
+          </fieldset>
+
+          <fieldset class="review-form_group form-group form-group--attractions">
+            <legend class="form-group_title">Опишите свои эмоции:</legend>
+            <textarea class="form-group_input form-group_input--text-area" name="review-comment" id="review-comment" placeholder="Опишите подробно все свои восторги" rows="5"></textarea>
+          </fieldset>
+
+          <button type="submit">Отправить отзыв</button>
+          <span class="review-form_required-description">* — обязательные поля</span>
+        </form>
 
     </main>
 
