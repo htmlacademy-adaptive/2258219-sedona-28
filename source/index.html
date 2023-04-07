@@ -4,116 +4,116 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
-  <body class="page_index index">
+  <body class="page__body">
     <!--PAGE HEADER-->
     <h1 class="visually-hidden">Седона</h1>
     <header class="page-header">
-      <nav class="page-header_nav navigation">
+      <a class="page-header__link" href="#">
+        <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96">
+      </a>
+      <nav class="page-header__nav">
         <h2 class="visually-hidden">Навигация</h2>
-        <a href="#"><img class="page-header_logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96"></a>
 
-        <label class="visually-hidden">Навигационное меню
-          <input class="" type="checkbox" name="hamburger">
-        </label>
-        <ul class="navigation_list nav-list">
-          <li class="nav-list_item nav-list_item--current"><a>Главная</a></li>
-          <li class="nav-list_item"><a href="catalog.html">Фото и видео</a></li>
-          <li class="nav-list_item"><a href="form.html">Форма отзыва</a></li>
-          <li class="nav-list_item"><a href="#">HTML Academy</a></li>
+        <button class="site-nav__toggle" type="button">
+          <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
+        </button>
+        <ul class="site-nav__list site-nav">
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--current">Главная</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Фото и видео</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="form.html">Форма отзыва</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#">HTML Academy</a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <!--MAIN CONTENT-->
-    <main class="index_page-main">
+    <main class="page__main">
 
       <!--SEDONA HERO-BLOCK aka INTRODUCTION-->
-      <section class="index_sedona sedona">
-        <img class="sedona-image" src="img/welcome.svg" alt="Welcome to the gorgeuos Sedona q:because the Grand Canyon sucks" width="320" height="389">
-        <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
+      <section class="intro">
+        <img class="intro__image" src="img/welcome.svg" alt="Welcome to the gorgeuos Sedona q:because the Grand Canyon sucks" width="320" height="389">
+        <h2 class="intro__title">Седона — небольшой городок в Аризоне,
+          заслуживающий большего!</h2>
+        <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
 
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
-
-        <div class="advantages_introduction introduction">
-          <div class="introdaction-container">
-            <h3 class="advantages_title section-title">Седона — небольшой городок в Аризоне,
-              заслуживающий большего!</h3>
-            <p class="advantages_text section-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-          </div>
-        </div>
-
-        <ul class="advantages_list">
-          <li class="advantages_item advantages-item--wide">
-            <div class="card">
-              <h3 class="card_title card-title--wide">Настоящий городок</h3>
-              <p class="card_text card-text--wide">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            </div>
-
-            <img src="img/photo-1.jpg" width="320" height="260" alt="Красивое заведение, окруженное природой">
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h3 class="advantages__title">Настоящий городок</h3>
+            <p class="advantages__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img class="advantages__image" src="img/photo-1.jpg" width="320" height="260" alt="Красивое заведение, окруженное природой">
 
             <!--SERVICE-->
-            <ul class="adventages_service service-list">
-              <li class="service_item card service_item--lodging">
-                <h4 class="card_title card_title--service">Жильё</h3>
-                <p class="card_text card_text--service">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <ul class="adventages__sublist">
+              <li class="adventages__subitem">
+                <h4 class="adventages__subtitle">Жильё</h4>
+                <p class="adventages__subtext">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
 
-              <li class="service_item card service_item--food">
-                <h4 class="card_title card_title--service">Еда</h3>
-                <p class="card_text card_text--service">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              <li class="adventages__subitem">
+                <h4 class="adventages__subtitle">Еда</h4>
+                <p class="adventages__subtext">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
               </li>
 
-              <li class="service_item card service_item--souvenir">
-                <h4 class="card_title card_title--service">Сувениры</h3>
-                <p class="card_text card_text--service">Не только китайского, но и настоящего местного производства!</p>
+              <li class="adventages__subitem">
+                <h4 class="adventages__subtitle">Сувениры</h4>
+                <p class="adventages__subtext">Не только китайского, но и настоящего местного производства!</p>
               </li>
             </ul>
           </li>
 
-          <li class="advantages_item advantages_item--wide">
-            <img src="img/photo-4-catalog.jpg" width="320" height="260" alt="Каньон в Седоне">
-
-            <div class="card">
-              <h3 class="card_title card-title--wide">Там есть мост дьявола</h3>
-              <p class="card_text card-text--wide">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            </div>
+          <li class="advantages__item">
+            <img class="" src="img/photo-4-catalog.jpg" width="320" height="260" alt="Каньон в Седоне">
+            <h3 class="advantages__title">Там есть мост дьявола</h3>
+            <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
 
-          <li class="advantages_item card">
-            <h3 class="card_title">Небольшая площадь</h3>
-            <p class="card_text">Все интересные места находятся очень близко</p>
+          <li class="advantages__item">
+            <h3 class="advantages__title">Небольшая площадь</h3>
+            <p class="advantages__text">Все интересные места находятся очень близко</p>
           </li>
 
-          <li class="advantages_item card">
-            <h3 class="card_title">Красивая дорога</h3>
-            <p class="card_text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <li class="advantages__item">
+            <h3 class="advantages__title">Красивая дорога</h3>
+            <p class="advantages__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
 
-          <li class="advantages_item card">
-            <h3 class="card_title">Мало туристов</h3>
-            <p class="card_text">Большинство едет в Гранд Каньон и толпится там</p>
+          <li class="advantages__item">
+            <h3 class="advantages__title">Мало туристов</h3>
+            <p class="advantages__text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
       </section>
 
       <!--HOTEL SEARCH-->
       <section class="hotel-search">
-        <div class="hotel-search_container">
+        <div class="hotel-search__container">
           <h2 class="visually-hidden">Поиск гостиницы</h2>
-          <h3 class="hotel-search-title section-title">Заинтересовались?</h3>
-          <p class="hotel-search_text section-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие
+          <h3 class="hotel-search__title">Заинтересовались?</h3>
+          <p class="hotel-search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие
             предложения гостиниц в Седоне</p>
 
-          <button class="hotel-search_button button button--primary" type="button">Поиск гостиницы в Седоне</button>
+          <button class="hotel-search__button" type="button">Поиск гостиницы в Седоне</button>
         </div>
       </section>
 
       <!--MAP POSITION-->
       <section class="map-position">
         <h2 class="visually-hidden">Расположение Седоны на карте</h2>
-        <img class="map-position_image" src="img/map.jpg" alt="" width="320" height="350"> <!--style="object-fit: cover" Всё в порядке-->
+        <img class="map-position__image" src="img/map.jpg" alt="" width="320" height="350"> <!--style="object-fit: cover" Всё в порядке-->
       </section>
     </main>
 
@@ -121,21 +121,21 @@
     <footer class="page-footer">
       <span>#VISITSEDONA</span>
 
-      <div class="page-footer_socials">
-        <div class="page-footer_social-block social">
-          <svg class="social_icon social_icon--vk"></svg>
+      <div class="page-footer__socials">
+        <div class="page-footer__social-block social">
+          <svg class="social__icon social_icon--vk"></svg>
         </div>
 
-        <div class="page-footer_social-block social">
-          <svg class="social_icon social_icon--tm"></svg>
+        <div class="page-footer__social-block social">
+          <svg class="social__icon social_icon--tm"></svg>
         </div>
 
-        <div class="page-footer_social-block social">
-          <svg class="social_icon social_icon--yt"></svg>
+        <div class="page-footer__social-block social">
+          <svg class="social__icon social__icon--yt"></svg>
         </div>
       </div>
 
-      <svg class="page-footer_html-logo"></svg>
+      <svg class="page-footer__html-logo"></svg>
     </footer>
   </body>
 </html>

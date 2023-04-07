@@ -5,83 +5,87 @@
     <title>HTML Academy: Седона. Фото и Видео</title>
   </head>
 
-  <body class="page_catalog catalog">
+  <body class="page__body">
     <!--PAGE HEADER-->
-    <h1 class="visually-hidden">Галерея</h1>
+    <h1 class="visually-hidden">Седона</h1>
     <header class="page-header">
-      <nav class="page-header_nav navigation">
+      <a class="page-header__link" href="#">
+        <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96">
+      </a>
+      <nav class="page-header__nav">
         <h2 class="visually-hidden">Навигация</h2>
-        <a href="#"><img class="page-header_logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96"></a>
 
-        <label class="visually-hidden">Навигационное меню
-          <input class="" type="checkbox" name="hamburger">
-        </label>
-        <ul class="navigation_list nav-list">
-          <li class="nav-list_item"><a href="index.html">Главная</a></li>
-          <li class="nav-list_item nav-list_item--current"><a>Фото и видео</a></li>
-          <li class="nav-list_item"><a href="form.html">Форма отзыва</a></li>
-          <li class="nav-list_item"><a href="#">HTML Academy</a></li>
+        <button class="site-nav__toggle" type="button">
+          <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
+        </button>
+        <ul class="site-nav__list site-nav">
+          <li class="site-nav__item">
+            <a class="site-nav__link">Главная</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--current" href="catalog.html">Фото и видео</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="form.html">Форма отзыва</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#">HTML Academy</a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <!--MAIN CONTENT-->
-    <main class="catalog_page-main">
-      <section class="catalog_sedona sedona">
-        <img class="sedona-image" src="img/sedona.svg" alt="Sedona" width="229" height="39">
-        <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
+    <main class="page__main">
+      <section class="intro">
+        <img class="intro__image" src="img/sedona.svg" alt="Sedona" width="229" height="39">
+          <h2 class="gallery__title">Фото и видео</h2>
+          <p class="gallery__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       </section>
 
       <!--GALLERY-->
       <section class="gallery">
-        <div class="gallery_introduction introduction">
-          <div class="introdaction-container">
-            <h2 class="gallery_title section-title">Фото и видео</h2>
-            <p class="gallery_text section-text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-          </div>
-        </div>
-
-        <ul class="gallery_list gallery-list">
-          <li class="gallery-list_item gallery-card">
-            <img class="gallery-card_photo" src="img/photo-1-catalog.jpg" alt="Ровная дорога в даль в золотой час(закат)." width="280" height="280">
-            <h3 class="gallery-card_title">неродные просторы</h3>
-            <p class="gallery-card_text">Автор фото: <span class="gallery-card_author-name">Борис</span></p><!--span "author-name" добавлен для возможного оживлеления функции постирования фото-->
-            <button class="gallery-card_like" type="button"><span class="gallery-card_counter">1350</span></button>
+        <h2 class="visually-hidden">Галерея фото</h2>
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <img class="gallery__photo" src="img/photo-1-catalog.jpg" alt="Ровная дорога в даль в золотой час(закат)." width="280" height="280">
+            <h3 class="gallery__title">неродные просторы</h3>
+            <p class="gallery__text">Автор фото: <span class="gallery__author-name">Борис</span></p><!--span "author-name" добавлен для возможного оживлеления функции постирования фото-->
+            <button class="gallery__like" type="button"><span class="gallery__counter">1350</span></button>
           </li>
 
-          <li class="gallery-list_item gallery-card">
-            <img class="gallery-card_photo" src="img/photo-2-catalog.jpg" alt="Удивительный вид кактуса, похожий на дженгу спустя какое-то время игры." width="280" height="280">
-            <h3 class="gallery-card_title">Местная растительность</h3>
-            <p class="gallery-card_text">Автор фото: <span class="gallery-card_author-name">Сергей</span></p>
-            <button class="gallery-card_like" type="button"><span class="gallery-card_counter">143</span></button>
+          <li class="gallery__item">
+            <img class="gallery__photo" src="img/photo-2-catalog.jpg" alt="Удивительный вид кактуса, похожий на дженгу спустя какое-то время игры." width="280" height="280">
+            <h3 class="gallery__title">Местная растительность</h3>
+            <p class="gallery__text">Автор фото: <span class="gallery__author-name">Сергей</span></p>
+            <button class="gallery__like" type="button"><span class="gallery__counter">143</span></button>
           </li>
 
-          <li class="gallery-list_item gallery-card">
-            <img class="gallery-card_photo" src="img/photo-3-catalog.jpg" alt="Закрученая посреди хвойного леса автомобильная дорога, идущая вокруг холма." width="280" height="280">
-            <h3 class="gallery-card_title">Дорога на север</h3>
-            <p class="gallery-card_text">Автор фото: <span class="gallery-card_author-name">Петр</span></p>
-            <button class="gallery-card_like" type="button"><span class="gallery-card_counter">96</span></button>
+          <li class="gallery__item">
+            <img class="gallery__photo" src="img/photo-3-catalog.jpg" alt="Закрученая посреди хвойного леса автомобильная дорога, идущая вокруг холма." width="280" height="280">
+            <h3 class="gallery__title">Дорога на север</h3>
+            <p class="gallery__text">Автор фото: <span class="gallery__author-name">Петр</span></p>
+            <button class="gallery__like" type="button"><span class="gallery__counter">96</span></button>
           </li>
 
-          <li class="gallery-list_item gallery-card">
-            <img class="gallery-card_photo" src="img/photo-4-catalog.jpg" alt="Равнина красных гор с обрывом." width="280" height="280">
-            <h3 class="gallery-card_title">Мост дьявола</h3>
-            <p class="gallery-card_text">Автор фото: <span class="gallery-card_author-name">Антон</span></p>
-            <button class="gallery-card_like" type="button"><span class="gallery-card_counter">254</span></button>
+          <li class="gallery__item">
+            <img class="gallery__photo" src="img/photo-4-catalog.jpg" alt="Равнина красных гор с обрывом." width="280" height="280">
+            <h3 class="gallery__title">Мост дьявола</h3>
+            <p class="gallery__text">Автор фото: <span class="gallery__author-name">Антон</span></p>
+            <button class="gallery__like" type="button"><span class="gallery__counter">254</span></button>
           </li>
         </ul>
       </section>
 
       <!--VIDEO-->
       <section class="video-presentation">
-        <div class="video-presentation_introduction introduction">
-          <div class="introdaction-container">
-            <h2 class="video-presentation_title section-title">Все еще сомневаетесь?</h2>
-            <p class="video-presentation_text section-text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-          </div>
-        </div>
+        <h2 class="video-presentation__title">Все еще сомневаетесь?</h2>
+        <p class="video-presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
 
-        <img class="video-presentation_video" src="img/video-presentation.jpg" alt="Вы едите по дороге, окруженной красными горами. Добро пожаловать в Седону!" width="280" height="177"></img>
+        <img class="video-presentation__video" src="img/video-presentation.jpg" alt="Вы едите по дороге, окруженной красными горами. Добро пожаловать в Седону!" width="280" height="177"></img>
       </section>
     </main>
 
@@ -89,20 +93,20 @@
     <footer class="page-footer">
       <span>#VISITSEDONA</span>
 
-      <div class="page-footer_socials">
-        <div class="page-footer_social-block social">
-          <svg class="social_icon social_icon--vk"></svg>
+      <div class="page-footer__socials">
+        <div class="page-footer__social-block social">
+          <svg class="social__icon social__icon--vk"></svg>
         </div>
 
         <div class="page-footer_social-block social">
-          <svg class="social_icon social_icon--tm"></svg>
+          <svg class="social__icon social__icon--tm"></svg>
         </div>
 
         <div class="page-footer_social-block social">
-          <svg class="social_icon social_icon--yt"></svg>
+          <svg class="social__icon social__icon--yt"></svg>
         </div>
       </div>
 
-      <svg class="page-footer_html-logo"></svg>
+      <svg class="page-footer__html-logo"></svg>
     </footer>
   </body>
