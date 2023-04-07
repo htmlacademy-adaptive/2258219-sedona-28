@@ -13,14 +13,13 @@
         <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96">
       </a>
       <nav class="page-header__nav">
-        <h2 class="visually-hidden">Навигация</h2>
-
-        <button class="site-nav__toggle" type="button">
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
         </button>
-        <ul class="site-nav__list site-nav">
+
+        <ul class="page-header__list site-nav">
           <li class="site-nav__item">
-            <a class="site-nav__link">Главная</a>
+            <a class="site-nav__link" href="#">Главная</a>
           </li>
 
           <li class="site-nav__item">
@@ -42,8 +41,8 @@
     <main class="page__main">
       <section class="intro">
         <img class="intro__image" src="img/sedona.svg" alt="Sedona" width="229" height="39">
-        <h2 class="form__title">Оставьте свой отзыв</h2>
-        <p class="form__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <h2 class="intro__title">Оставьте свой отзыв</h2>
+        <p class="intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
 
        <!--FORM-->
@@ -60,8 +59,8 @@
               <input class="review-form__input" type="text" name="author-surname" placeholder="Фамилия" value="Пустота" required>
             </label>
 
-            <label class="review-form_label">Отчество:
-              <input class="review-form_input" type="text" name="author-patronymic" placeholder="Отчество" value="Викторович">
+            <label class="review-form__label">Отчество:
+              <input class="review-form__input" type="text" name="author-patronymic" placeholder="Отчество" value="Викторович">
             </label>
           </fieldset>
 
@@ -128,31 +127,45 @@
       </section>
     </main>
 
-    <!--PAGE FOOTER-->
+     <!--PAGE FOOTER-->
     <footer class="page-footer">
-      <span>#VISITSEDONA</span>
+      <span class="page-footer__hashtag">#visitsedona</span>
 
-      <div class="page-footer__socials">
-        <div class="page-footer__social-block social">
-          <svg class="social__icon social__icon--vk"></svg>
-        </div>
+      <ul class="page-footer__socials social">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">В контакте</span>
+            <svg class="social__icon"></svg>
+          </a>
+        </li>
 
-        <div class="page-footer__social-block social">
-          <svg class="social__icon social__icon--tm"></svg>
-        </div>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Теллеграм</span>
+            <svg class="social__icon"></svg>
+          </a>
+        </li>
 
-        <div class="page-footer__social-block social">
-          <svg class="social__icon social__icon--yt"></svg>
-        </div>
-      </div>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Ютуб</span>
+            <svg class="social__icon"></svg>
+          </a>
+        </li>
+      </ul>
 
-      <svg class="page-footer__html-logo"></svg>
+      <a class="page-footer__copyright copyright" href="#">
+        <span class="copyright__text">Разработано</span>
+        <span class="visually-hidden">HTML-Academy</span>
+        <svg class="copyright__logo"></svg>
+      </a>
     </footer>
 
     <!--MODAL ERROR-->
     <section class="review-form__modal-window modal-window">
       <h2 class="modal-window__title">Что-то пошло не так!</h2>
       <p class="modal-window__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+
       <button class="modal-window__button" type="button">ОК</button>
     </section>
 
@@ -160,7 +173,7 @@
     <section class="review-form__modal-window modal-window">
       <h2 class="modal-window__title">Ваш отзыв отправлен!</h2>
       <p class="modal-window__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте</p>
+
       <button class="modal-window__button" type="button">Закрыть окно</button>
     </section>
-
   </body>

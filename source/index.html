@@ -12,12 +12,11 @@
         <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96">
       </a>
       <nav class="page-header__nav">
-        <h2 class="visually-hidden">Навигация</h2>
-
-        <button class="site-nav__toggle" type="button">
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
         </button>
-        <ul class="site-nav__list site-nav">
+
+        <ul class="page-header__list site-nav">
           <li class="site-nav__item">
             <a class="site-nav__link site-nav__link--current">Главная</a>
           </li>
@@ -40,7 +39,7 @@
     <!--MAIN CONTENT-->
     <main class="page__main">
 
-      <!--SEDONA HERO-BLOCK aka INTRODUCTION-->
+      <!--INTRODUCTION-->
       <section class="intro">
         <img class="intro__image" src="img/welcome.svg" alt="Welcome to the gorgeuos Sedona q:because the Grand Canyon sucks" width="320" height="389">
         <h2 class="intro__title">Седона — небольшой городок в Аризоне,
@@ -57,20 +56,20 @@
             <img class="advantages__image" src="img/photo-1.jpg" width="320" height="260" alt="Красивое заведение, окруженное природой">
 
             <!--SERVICE-->
-            <ul class="adventages__sublist">
-              <li class="adventages__subitem">
-                <h4 class="adventages__subtitle">Жильё</h4>
-                <p class="adventages__subtext">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <ul class="advantages__sublist">
+              <li class="advantages__subitem">
+                <h4 class="advantages__subtitle">Жильё</h4>
+                <p class="advantages__subtext">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
 
-              <li class="adventages__subitem">
-                <h4 class="adventages__subtitle">Еда</h4>
-                <p class="adventages__subtext">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              <li class="advantages__subitem">
+                <h4 class="advantages__subtitle">Еда</h4>
+                <p class="advantages__subtext">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
               </li>
 
-              <li class="adventages__subitem">
-                <h4 class="adventages__subtitle">Сувениры</h4>
-                <p class="adventages__subtext">Не только китайского, но и настоящего местного производства!</p>
+              <li class="advantages__subitem">
+                <h4 class="advantages__subtitle">Сувениры</h4>
+                <p class="advantages__subtext">Не только китайского, но и настоящего местного производства!</p>
               </li>
             </ul>
           </li>
@@ -113,29 +112,42 @@
       <!--MAP POSITION-->
       <section class="map-position">
         <h2 class="visually-hidden">Расположение Седоны на карте</h2>
-        <img class="map-position__image" src="img/map.jpg" alt="" width="320" height="350"> <!--style="object-fit: cover" Всё в порядке-->
+        <img class="map-position__image" src="img/map.jpg" alt="" width="320" height="350"> <!--style="object-fit: cover"-->
       </section>
     </main>
 
     <!--PAGE FOOTER-->
     <footer class="page-footer">
-      <span>#VISITSEDONA</span>
+      <span class="page-footer__hashtag">#visitsedona</span>
 
-      <div class="page-footer__socials">
-        <div class="page-footer__social-block social">
-          <svg class="social__icon social_icon--vk"></svg>
-        </div>
+      <ul class="page-footer__socials social">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">В контакте</span>
+            <svg class="social__icon"></svg>
+          </a>
+        </li>
 
-        <div class="page-footer__social-block social">
-          <svg class="social__icon social_icon--tm"></svg>
-        </div>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Теллеграм</span>
+            <svg class="social__icon"></svg>
+          </a>
+        </li>
 
-        <div class="page-footer__social-block social">
-          <svg class="social__icon social__icon--yt"></svg>
-        </div>
-      </div>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Ютуб</span>
+            <svg class="social__icon"></svg>
+          </a>
+        </li>
+      </ul>
 
-      <svg class="page-footer__html-logo"></svg>
+      <a class="page-footer__copyright copyright" href="#">
+        <span class="copyright__text">Разработано</span>
+        <span class="visually-hidden">HTML-Academy</span>
+        <svg class="copyright__logo"></svg>
+      </a>
     </footer>
   </body>
 </html>
