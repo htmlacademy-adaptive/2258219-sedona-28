@@ -1,0 +1,30 @@
+
+.button {
+  display: block;
+  max-width: 458px;
+  width: 100%;
+
+  background-color: @main-color;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: @text-contrast;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    background-color: @main-hover;
+  }
+
+  &:active {
+    background-color: @main-active;
+    color: @text-active;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: @disabled;
+  }
+}
