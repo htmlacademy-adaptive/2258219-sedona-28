@@ -54,8 +54,10 @@
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
-            <h3 class="advantages__title">Настоящий городок</h3>
-            <p class="advantages__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <div class="advantages__item-container">
+              <h3 class="advantages__title">Настоящий городок</h3>
+              <p class="advantages__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
             <img class="advantages__image" src="img/photo-1.jpg" width="320" height="260" alt="Красивое заведение, окруженное природой">
 
             <!--SERVICE-->
@@ -77,26 +79,31 @@
             </ul>
           </li>
 
-          <li class="advantages__item">
-            <img class="" src="img/photo-4-catalog.jpg" width="320" height="260" alt="Каньон в Седоне">
-            <h3 class="advantages__title">Там есть мост дьявола</h3>
-            <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-          </li>
 
           <li class="advantages__item">
-            <h3 class="advantages__title">Небольшая площадь</h3>
-            <p class="advantages__text">Все интересные места находятся очень близко</p>
+            <div class="advantages__item-container">
+              <h3 class="advantages__title">Там есть мост дьявола</h3>
+              <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
+            <img class="advantages__image" src="img/photo-4-catalog.jpg" width="320" height="260" alt="Каньон в Седоне">
           </li>
 
-          <li class="advantages__item">
-            <h3 class="advantages__title">Красивая дорога</h3>
-            <p class="advantages__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
+          <div class="advantages__item-container advantages__item-container--secondary"> <!--container для правильной длины border-->
+            <li class="advantages__item advantages__item--secondary">
+              <h3 class="advantages__title">Небольшая площадь</h3>
+              <p class="advantages__text">Все интересные места находятся очень близко</p>
+            </li>
 
-          <li class="advantages__item">
-            <h3 class="advantages__title">Мало туристов</h3>
-            <p class="advantages__text">Большинство едет в Гранд Каньон и толпится там</p>
-          </li>
+            <li class="advantages__item advantages__item--secondary">
+              <h3 class="advantages__title">Красивая дорога</h3>
+              <p class="advantages__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+
+            <li class="advantages__item advantages__item--secondary">
+              <h3 class="advantages__title">Мало туристов</h3>
+              <p class="advantages__text">Большинство едет в Гранд Каньон и толпится там</p>
+            </li>
+          </div>
         </ul>
       </section>
 
