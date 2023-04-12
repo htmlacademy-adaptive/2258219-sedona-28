@@ -1,0 +1,87 @@
+.review-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: none;
+}
+
+.review-form__fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.review-form__title {
+  padding: 24px 0 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.review-form__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.review-form__item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.review-form__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-form__naming {
+  padding: 0 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: @text-secondary;
+}
+
+.review-form__input {
+  padding: 16px;
+  border: none;
+  font-weight: 700;
+  background-color: @form-input;
+
+  &:placeholder-shown {
+    color: @placeholder;
+  }
+}
+
+.review-form__textarea {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 56px;
+  border: none;
+
+  font-family: @main-font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  background-color: @form-input;
+
+  &:placeholder-shown {
+    color: @placeholder;
+  }
+}
+
+.review-form__button {
+  padding: 16px;
+}
+
+.review-form__required-description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: fade(@text-secondary, 60%);
+  text-transform: uppercase;
+}

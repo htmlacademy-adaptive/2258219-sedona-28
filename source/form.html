@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона. Форма отзыва</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="page__body">
@@ -145,7 +146,7 @@
               </li>
 
               <li class="review-form__item">
-                <label class="review-form__label">
+                <label class="review-form__checkbox-label">
                   <input class="review-form__checkbox-input" type="checkbox" name="red-rocks">
                   <span class="review-form__checkbox-naming">Красные скалы</span>
                 </label>
@@ -203,7 +204,7 @@
       <h2 class="modal-window__title">Что-то пошло не так!</h2>
       <p class="modal-window__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
 
-      <button class="modal-window__button button" type="button">ОК</button>
+      <button class="modal-window__button button modal-window__button--error" type="button">ОК</button>
     </section>
 
     <!--MODAL SUCCESS-->
@@ -211,6 +212,6 @@
       <h2 class="modal-window__title">Ваш отзыв отправлен!</h2>
       <p class="modal-window__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте</p>
 
-      <button class="modal-window__button button" type="button">Закрыть окно</button>
+      <button class="modal-window__button button modal-window__button--success" type="button">Закрыть окно</button>
     </section>
   </body>
