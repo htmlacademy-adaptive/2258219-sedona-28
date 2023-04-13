@@ -1,0 +1,28 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  width: 156px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social__item {
+  background-color: @main-color;
+  min-width: 48px;
+  min-height: 48px;
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.social__icon {
+  padding: 12px;
+}
