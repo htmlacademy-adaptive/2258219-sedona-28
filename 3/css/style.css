@@ -86,10 +86,15 @@ img {
   width: 100%;
   min-height: 389px;
   margin-bottom: 32px;
-  padding: 0 20px;
   background-color: #669ec0;
   background-image: url("../../img/main-bcg.jpg");
   background-position: 49% 30%;
+}
+.intro__image-container--inner {
+  min-height: 157px;
+  margin-bottom: 36px;
+  background-image: url("../../img/main-bcg.jpg");
+  background-position: 30% 100%;
 }
 .intro__image {
   margin: auto;
@@ -332,11 +337,13 @@ img {
   text-transform: uppercase;
 }
 .modal-window {
-  position: fixed;
+  /*position: fixed;
   z-index: 5;
   top: 0;
   left: 0;
-  display: none;
+
+  display: none;*/
+  /*Расскоментировать после подключения JS*/
   width: 320px;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
