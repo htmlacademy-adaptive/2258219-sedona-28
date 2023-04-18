@@ -1,6 +1,7 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 17px;
 }
 
 .gallery__list {
@@ -12,6 +13,10 @@
 .gallery__item {
   padding: 24px 20px 25px;
   border-bottom: 1px solid #e5e5e5;
+
+  &:first-child {
+    border-top: 1px solid #e5e5e5;
+  }
 }
 
 .gallery__title {

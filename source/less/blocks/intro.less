@@ -1,29 +1,31 @@
 .intro {
   display: flex;
   flex-direction: column;
-  min-height: 205px;
 }
 
 .intro__container {
-  min-height: 157px;
   margin: auto;
   text-align: center;
+
+  &--inner {
+    margin-bottom: 25px;
+  }
 }
 
 .intro__image-container {
   display: flex;
   width: 100%;
-  min-height: 389px;
+  padding: 90px 19px 85px;
   margin-bottom: 32px;
 
   background-color: @main-hover;
   background-image: url("../../img/main-bcg.jpg");
   background-position: 49% 30%;
+  background-size: cover;
 
   &--inner {
-    min-height: 157px;
+    padding: 52px 45px 67px;
     margin-bottom: 36px;
-    background-image: url("../../img/main-bcg.jpg");
     background-position: 30% 100%;
   }
 }

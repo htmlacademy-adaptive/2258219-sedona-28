@@ -1,6 +1,7 @@
 .advantages {
   display: flex;
   flex-direction: column;
+  margin-bottom: 38px;
 }
 
 .advantages__list {
@@ -54,19 +55,11 @@
   margin: 16px 0 0;
 }
 
-.advantages__item-container--secondary { /*Переписывание заданных свойств...*/
-  padding: 24px 18px 28px;
-  background-color: @card-secondary;
-  color: @text-main;
-}
-
 .advantages__item--secondary {
-  &:not(:last-child) {
-    border-bottom: 1px solid #d6d6d6;
-    padding-bottom: 24px;
-  }
+  padding: 24px 18px;
+  background-color: @card-secondary;
 
-  &:not(:first-child) {
-    padding-top: 24px;
+  &:last-child {
+    padding-bottom: 28px;
   }
 }
