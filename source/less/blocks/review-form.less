@@ -15,14 +15,76 @@
 
 .review-form__fieldset {
   padding: 0;
-  margin: 0;
+  margin: 24px 0;
   border: none;
+
+  &--introduce {
+    margin-bottom: 39px;
+  }
+
+  &--contacts {
+    margin-bottom: 34px;
+  }
+
+  &--comment {
+    margin-bottom: 56px;
+  }
+}
+
+/* МЕДИА СЕТКА ФОРМЫ */
+
+@media (min-width: @tablet-width) {
+  .review-form__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 60px;
+  }
+
+  .review-form__fieldset {
+    grid-column: 1/-1;
+
+    &--introduce {
+      grid-column: 1/2;
+      margin: 0 70px 63px 0;
+    }
+
+    &--contacts {
+      grid-column: 2/3;
+      margin: 0;
+    }
+
+    &--feelings {
+      margin-bottom: 48px;
+    }
+
+    &--attractions {
+      margin-bottom: 42px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review-form__form {
+    padding: 0 120px;
+  }
+
+  .review-form__fieldset {
+    margin-bottom: 56px;
+
+    &--introduce {
+      margin: 0 128px 71px 0;
+    }
+  }
 }
 
 .review-form__title {
-  padding: 24px 0 20px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
+  }
 }
 
 .review-form__list {
@@ -77,6 +139,10 @@
   &:placeholder-shown {
     color: @placeholder;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
 }
 
 .review-form__button {
@@ -84,6 +150,8 @@
 }
 
 .review-form__required-description {
+  margin-left: auto;
+  align-self: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
