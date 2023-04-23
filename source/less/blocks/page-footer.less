@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 33px 10px;
 }
 
 .page-footer__container {
@@ -15,4 +16,16 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding: 36px 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding: 36px 120px;
+  }
 }
