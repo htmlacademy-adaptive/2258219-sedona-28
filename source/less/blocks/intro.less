@@ -24,6 +24,44 @@
   margin: auto;
 }
 
+.intro__container {
+  &--index {
+    margin: 32px auto;
+
+    @media (min-width: @tablet-width) {
+      margin: 47.5px auto 55.5px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 59px auto 44px;
+    }
+  }
+
+  &--catalog {
+    margin: 37px auto 42px;
+
+    @media (min-width: @tablet-width) {
+      margin: 66px auto 86px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 100px auto 94px;
+    }
+  }
+
+  &--form {
+    margin: 36px auto 28px;
+
+    @media (min-width: @tablet-width) {
+      margin: 64px auto 108px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 115px auto 68px;
+    }
+  }
+}
+
 .intro__title {
   margin: 0;
   font-weight: 700;
@@ -33,6 +71,8 @@
 }
 
 .intro__text {
+  margin: 0;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
