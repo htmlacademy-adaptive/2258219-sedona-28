@@ -11,12 +11,7 @@
 
 .site-nav__item {
   padding: 17px 6px 12px;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   text-align: center;
-
-  &:last-child {
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  }
 }
 
 .site-nav__link {
@@ -25,4 +20,29 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+}
+
+/* МЕДИА СЕТКА НАВИГАЦИИ*/
+
+@media (min-width: @tablet-width) {
+  .site-nav {
+    flex-direction: row;
+    background-color: #ffffff;
+  }
+
+  .site-nav__item {
+    padding: 18px 27px 17px 28px;
+  }
+
+  .site-nav__link {
+    color: @text-main;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-nav__item {
+    padding: 18px 68px 17px;
+  }
 }

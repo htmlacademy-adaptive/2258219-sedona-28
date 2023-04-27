@@ -1,9 +1,15 @@
 .page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   min-height: 100%;
   background-color: #e7e5e5;
 }
 
 .page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   margin: 0;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -18,4 +24,9 @@
     margin: 0 auto;
     max-width: 1200px;
   }
+}
+
+.page__main {
+  flex-grow: 1;
+  height: 100%;
 }
