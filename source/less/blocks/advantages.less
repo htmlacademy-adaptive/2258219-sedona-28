@@ -8,7 +8,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
 }
+
 
 .advantages__item-container {
   padding: 37px 18px;
@@ -22,6 +27,10 @@
   font-size: 18px;
   line-height: 26px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .advantages__text {
@@ -34,6 +43,10 @@
   padding: 23px 18px 46px;
   list-style: none;
   background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .advantages__subitem {
@@ -42,6 +55,20 @@
   &:not(:last-child) {
     padding-bottom: 25px;
   }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 33px;
+
+    text-align: center;
+
+    &:not(:last-child) {
+      padding-bottom: 60px; /*из-за каскада переопределяем отдельно padding-bottom: 25px;*/
+    }
+  }
 }
 
 .advantages__subtitle {
@@ -49,6 +76,10 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .advantages__subtext {
@@ -64,8 +95,44 @@
   }
 }
 
+/* МЕДИА СЕТКА ФОРМЫ */
 @media (min-width: @tablet-width) {
-  .advantages {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 60px;
+  }
+
+  .advantages__item-container {
+    padding: 52px 33px 31px;
+  }
+
+  .advantages__item--wide {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .advantages__item--secondary {
+    padding: 41px 33px;
+  }
+
+  .advantages__item-container--reverse {
+    order: 2;
+  }
+
+  .advantages__sublist {
+    grid-column: 1/-1;
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item-container {
+    padding: 52px 50px;
+  }
+
+  .advantages__item--secondary {
+    padding: 52px 50px;
   }
 }
