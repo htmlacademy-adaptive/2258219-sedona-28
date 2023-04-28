@@ -59,10 +59,15 @@ img {
   background-color: #e5e5e5;
 }
 .page {
+  margin: 0 auto;
+  width: 100%;
   min-height: 100%;
   background-color: #e7e5e5;
 }
 .page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   margin: 0;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -75,12 +80,21 @@ img {
 @media (min-width: 1200px) {
   .page__body {
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1200px;
   }
+}
+.page__main {
+  flex-grow: 1;
+  height: 100%;
 }
 /*Блоки*/
 .page-header {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .page-header__toggle {
+    display: none;
+  }
 }
 .site-nav {
   padding: 0;
@@ -92,11 +106,7 @@ img {
 }
 .site-nav__item {
   padding: 17px 6px 12px;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   text-align: center;
-}
-.site-nav__item:last-child {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 .site-nav__link {
   color: #ffffff;
@@ -104,6 +114,26 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+}
+/* МЕДИА СЕТКА НАВИГАЦИИ*/
+@media (min-width: 768px) {
+  .site-nav {
+    flex-direction: row;
+    background-color: #ffffff;
+  }
+  .site-nav__item {
+    padding: 18px 27px 17px 28px;
+  }
+  .site-nav__link {
+    color: #000000;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+@media (min-width: 1200px) {
+  .site-nav__item {
+    padding: 18px 68px 17px;
+  }
 }
 .intro {
   text-align: center;
@@ -114,7 +144,7 @@ img {
   padding: 90px 19px 85px;
   margin-bottom: 32px;
   background-color: #669ec0;
-  background-image: url("../../img/main-bcg.jpg");
+  background-image: url("../img/main-bcg.jpg");
   background-position: 49% 30%;
   background-size: cover;
 }
@@ -125,6 +155,9 @@ img {
 }
 .intro__image {
   margin: auto;
+}
+.intro__container {
+  padding: 0 20px;
 }
 .intro__container--index {
   margin: 32px auto;
@@ -167,6 +200,7 @@ img {
 }
 .intro__title {
   margin: 0;
+  margin-bottom: 37px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -178,6 +212,7 @@ img {
   font-size: 14px;
   line-height: 21px;
   text-align: center;
+  display: inline-block;
 }
 .advantages {
   display: flex;
@@ -188,6 +223,11 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media (min-width: 768px) {
+  .advantages__list {
+    margin-bottom: 60px;
+  }
 }
 .advantages__item-container {
   padding: 37px 18px;
@@ -201,6 +241,11 @@ img {
   line-height: 26px;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .advantages__title {
+    font-size: 21px;
+  }
+}
 .advantages__text {
   margin-bottom: 0;
   text-align: center;
@@ -211,17 +256,41 @@ img {
   list-style: none;
   background-color: #ffffff;
 }
+@media (min-width: 768px) {
+  .advantages__sublist {
+    padding: 0;
+  }
+}
 .advantages__subitem {
   color: #000000;
 }
 .advantages__subitem:not(:last-child) {
   padding-bottom: 25px;
 }
+@media (min-width: 768px) {
+  .advantages__subitem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 33px;
+    text-align: center;
+  }
+  .advantages__subitem:not(:last-child) {
+    padding-bottom: 60px;
+    /*из-за каскада переопределяем отдельно padding-bottom: 25px;*/
+  }
+}
 .advantages__subtitle {
   margin: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+}
+@media (min-width: 768px) {
+  .advantages__subtitle {
+    font-size: 21px;
+  }
 }
 .advantages__subtext {
   margin: 16px 0 0;
@@ -233,9 +302,38 @@ img {
 .advantages__item--secondary:last-child {
   padding-bottom: 28px;
 }
+/* МЕДИА СЕТКА ФОРМЫ */
 @media (min-width: 768px) {
-  .advantages {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 60px;
+  }
+  .advantages__item-container {
+    padding: 52px 33px 31px;
+  }
+  .advantages__item--wide {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .advantages__item--secondary {
+    padding: 41px 33px;
+  }
+  .advantages__item-container--reverse {
+    order: 2;
+  }
+  .advantages__sublist {
+    grid-column: 1/-1;
+    display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  .advantages__item-container {
+    padding: 52px 50px;
+  }
+  .advantages__item--secondary {
+    padding: 52px 50px;
   }
 }
 .hotel-search {
@@ -251,6 +349,11 @@ img {
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .hotel-search__title {
+    font-size: 21px;
+  }
 }
 .hotel-search__text {
   margin: 19px 0 32px;
