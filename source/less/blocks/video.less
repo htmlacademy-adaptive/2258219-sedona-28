@@ -1,6 +1,4 @@
 .video {
-  display: flex;
-  flex-direction: column;
   padding: 0 20px;
   margin-bottom: 33px;
   text-align: center;
@@ -8,32 +6,34 @@
 
 .video__title {
   font-weight: 700;
-  margin-bottom: 38px;
-}
-
-.video__text {
-  margin-bottom: 38px;
+  margin: 0 0 38px;
+  font-size: 18px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 93px;
+    font-size: 21px;
   }
 }
 
-.video__content {
-  display: flex;
-  justify-content: center;
+.video__text {
+  margin: 0 0 38px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 93px;
+  }
+}
+
+.video__image {
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .video {
-    padding: 0 60px;
     margin-bottom: 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .video {
-    padding: 0 200px;
     margin-bottom: 84px;
   }
 }
