@@ -1,5 +1,6 @@
 .page {
-  margin: 0 auto;
+  display: flex;
+  min-width: 320px;
   width: 100%;
   min-height: 100%;
   background-color: #e7e5e5;
@@ -9,8 +10,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  margin: 0;
-  background-color: #ffffff;
+  margin: 0 auto;
+  background-color: @main-bcg;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
   font-family: @main-font;
@@ -20,7 +21,6 @@
   text-transform: uppercase;
 
   @media (min-width: @desktop-width) {
-    margin: 0 auto;
     max-width: 1200px;
   }
 }
