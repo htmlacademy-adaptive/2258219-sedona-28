@@ -1,14 +1,40 @@
 .intro {
-  display: flex;
-  flex-direction: column;
-}
-
-.intro__container {
-  margin: auto;
   text-align: center;
 
-  &--inner {
-    margin-bottom: 25px;
+  &--index {
+    padding: 0 0 32px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 0 55.5px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 0 44px;
+    }
+  }
+
+  &--catalog {
+    padding: 0 0 42px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 0 86px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 0 94px;
+    }
+  }
+
+  &--form {
+    padding: 0 0 53px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 0 108px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 0 68px;
+    }
   }
 }
 
@@ -19,14 +45,50 @@
   margin-bottom: 32px;
 
   background-color: @main-hover;
-  background-image: url("../../img/main-bcg.jpg");
-  background-position: 49% 30%;
+  background-image: url("../img/main-bcg.jpg");
+  background-position: 100% 100%;
   background-size: cover;
 
   &--inner {
     padding: 52px 45px 67px;
     margin-bottom: 36px;
-    background-position: 30% 100%;
+    background-position: 0 100%;
+  }
+
+  &--index {
+    margin: 0 0 32px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 0 47.5px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 0 59px;
+    }
+  }
+
+  &--catalog {
+    margin: 0 0 37px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 0 66px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 0 100px;
+    }
+  }
+
+  &--form {
+    margin: 0 0 36px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 0 64px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 0 115px;
+    }
   }
 }
 
@@ -34,17 +96,30 @@
   margin: auto;
 }
 
+.intro__container {
+  padding: 0 20px;
+}
+
 .intro__title {
   margin: 0;
+  margin-bottom: 37px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .intro__text {
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  text-align: center;
+  color: @text-secondary;
 }

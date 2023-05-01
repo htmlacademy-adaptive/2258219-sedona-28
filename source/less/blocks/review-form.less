@@ -2,23 +2,73 @@
   display: flex;
   flex-direction: column;
   padding: 0 20px;
-  margin-bottom: 55px;
+  margin-bottom: 22px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+  }
 }
 
 .review-form__fieldset {
   padding: 0;
-  margin: 0;
+  margin: 0 0 49px;
   border: none;
+
+  &--introduce {
+    margin-bottom: 64px;
+  }
+
+  &--contacts {
+    margin-bottom: 59px;
+  }
+
+  &--comment {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--feelings {
+      margin-bottom: 48px;
+    }
+
+    &--attractions {
+      margin-bottom: 42px;
+    }
+
+    &--comment {
+      margin-bottom: 48px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
+
+    &--comment {
+      margin-bottom: 48px;
+    }
+  }
 }
 
 .review-form__title {
-  padding: 24px 0 20px;
+  padding: 0;
+  margin-bottom: 20px;
   text-transform: uppercase;
   text-align: center;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
+    font-size: 21px;
+  }
 }
 
 .review-form__list {
@@ -73,6 +123,10 @@
   &:placeholder-shown {
     color: @placeholder;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
 }
 
 .review-form__button {
@@ -80,9 +134,75 @@
 }
 
 .review-form__required-description {
+  margin-left: auto;
+  align-self: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
   color: fade(@text-secondary, 60%);
   text-transform: uppercase;
+}
+
+/* МЕДИА СЕТКА ФОРМЫ */
+
+@media (min-width: @tablet-width) {
+  .review-form__userinfo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 58px;
+    margin-bottom: 63px;
+  }
+
+  .review-form__fieldset {
+    &--introduce {
+      grid-column: 1/2;
+      margin: 0;
+    }
+
+    &--contacts {
+      grid-column: 2/3;
+      margin: 0;
+    }
+
+    &--feelings {
+      margin-bottom: 48px;
+    }
+
+    &--attractions {
+      margin-bottom: 42px;
+    }
+  }
+
+  .review-form__list {
+    &--feelings {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 36px;
+    }
+
+    &--attractions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 84px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review-form__userinfo-container {
+    gap: 100px;
+    margin-bottom: 71px;
+  }
+
+  .review-form__list {
+    &--feelings {
+      padding: 0 53px;
+    }
+
+    &--attractions {
+      padding: 0 44.5px;
+    }
+  }
 }
