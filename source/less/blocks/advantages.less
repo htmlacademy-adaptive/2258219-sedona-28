@@ -17,7 +17,15 @@
 .advantages__item-container {
   padding: 37px 18px;
   background-color: @main-color;
-  color: @text-contrast;
+
+  .advantages__title--wide,
+  .advantages__text--wide {
+    color: @text-contrast;
+  }
+}
+
+.advantages__image {
+  display: block;
 }
 
 .advantages__title {
@@ -35,6 +43,7 @@
 .advantages__text {
   margin: 0;
   text-align: center;
+  color: @text-secondary;
 }
 
 .advantages__sublist {
@@ -83,6 +92,7 @@
 
 .advantages__subtext {
   margin: 0;
+  color: @text-secondary;
 }
 
 .advantages__item--secondary {
