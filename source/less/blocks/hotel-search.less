@@ -27,11 +27,17 @@
   text-align: center;
   text-transform: uppercase;
   color: @text-secondary;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
 .hotel-search__link {
   padding: 16px;
   margin: auto;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
