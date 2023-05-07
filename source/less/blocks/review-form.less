@@ -19,42 +19,90 @@
 }
 
 .review-form__fieldset {
+  position: relative;
+
   padding: 0;
   margin: 0 0 49px;
   border: none;
 
+  &:first-child::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -64px;
+    height: 1px;
+    width: 100%;
+    background-color: @input-hover;
+
+    @media (min-width: @tablet-width) {
+      content: none;
+    }
+  }
+
   &--introduce {
     margin-bottom: 64px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -39px;
+      height: 1px;
+      width: 100%;
+      background-color: @input-hover;
+
+      @media (min-width: @tablet-width) {
+        left: auto;
+        right: -28.5px;
+        top: -54px;
+        bottom: 0;
+        width: 1px;
+        height: 125%;
+      }
+
+      @media (min-width: @desktop-width) {
+        right: -49.5px;
+      }
+    }
   }
 
   &--contacts {
     margin-bottom: 59px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -34px;
+      height: 1px;
+      width: 100%;
+      background-color: @input-hover;
+
+      @media (min-width: @tablet-width) {
+        content: none;
+      }
+    }
+  }
+
+  &--feelings,
+  &--attractions {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -34px;
+      height: 1px;
+      width: 100%;
+      background-color: @input-hover;
+
+      @media (min-width: @tablet-width) {
+        content: none;
+      }
+    }
   }
 
   &--comment {
     margin-bottom: 56px;
-  }
-
-  @media (min-width: @tablet-width) {
-    &--feelings {
-      margin-bottom: 48px;
-    }
-
-    &--attractions {
-      margin-bottom: 42px;
-    }
-
-    &--comment {
-      margin-bottom: 48px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 56px;
-
-    &--comment {
-      margin-bottom: 48px;
-    }
   }
 }
 
@@ -65,9 +113,35 @@
   text-align: center;
   line-height: 26px;
 
+  &--feelings,
+  &--attractions {
+    margin-bottom: 30px;
+  }
+
   @media (min-width: @tablet-width) {
+    padding: 0 64px;
     margin-bottom: 28px;
     font-size: 21px;
+
+    &--contacts,
+    &--introduce {
+      padding: 0;
+    }
+
+    &--feelings,
+    &--attractions {
+      margin-bottom: 38px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--feelings {
+      margin-bottom: 55px;
+    }
+
+    &--attractions {
+      margin-bottom: 69px;
+    }
   }
 }
 
@@ -80,6 +154,13 @@
 .review-form__item {
   &:not(:last-child) {
     margin-bottom: 16px;
+  }
+
+  &--radio,
+  &--checkbox {
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
   }
 }
 
@@ -106,12 +187,27 @@
   &:placeholder-shown {
     color: @placeholder;
   }
+
+  &:hover {
+    background-color: @input-hover;
+  }
+
+  &:active,
+  &:focus {
+    border: none;
+    background-color: @main-bcg;
+    outline: 4px solid @input-hover;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: default;
+  }
 }
 
 .review-form__textarea {
   width: 100%;
   padding: 16px;
-  margin-bottom: 56px;
   border: none;
 
   font-family: @main-font;
@@ -124,8 +220,20 @@
     color: @placeholder;
   }
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 48px;
+  &:hover {
+    background-color: @input-hover;
+  }
+
+  &:active,
+  &:focus {
+    border: none;
+    background-color: @main-bcg;
+    outline: 4px solid @input-hover;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: default;
   }
 }
 
@@ -165,11 +273,18 @@
     }
 
     &--feelings {
-      margin-bottom: 48px;
+      margin-bottom: 58px;
+      border-top: 1px solid @input-hover;
     }
 
     &--attractions {
-      margin-bottom: 42px;
+      margin-bottom: 52px;
+      border-top: 1px solid @input-hover;
+    }
+
+    &--comment {
+      margin-bottom: 48px;
+      border-top: 1px solid @input-hover;
     }
   }
 
@@ -178,14 +293,25 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      gap: 36px 16px;
       padding: 0 36px;
     }
 
     &--attractions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 0 84px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px 32px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  .review-form__item {
+    &--radio,
+    &--checkbox {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -196,13 +322,110 @@
     margin-bottom: 71px;
   }
 
+  .review-form__fieldset {
+    &--feelings {
+      margin-bottom: 83px;
+    }
+
+    &--attractions {
+      margin-bottom: 97px;
+    }
+
+    &--comment {
+      margin-bottom: 48px;
+    }
+  }
+
   .review-form__list {
     &--feelings {
+      gap: 36px 28px;
       padding: 0 53px;
     }
 
     &--attractions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px 0;
       padding: 0 44.5px;
+      max-width: none;
     }
+  }
+}
+
+
+/* CONTROL-MARK */
+
+.review-form__checkbox-label,
+.review-form__radio-label {
+  display: block;
+  position: relative;
+  padding-left: 62px;
+  margin: 0;
+
+  cursor: pointer;
+}
+
+.control-mark {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top: -9px;
+  left: 0;
+
+  border-radius: 4px;
+  background-color: @form-input;
+}
+
+.control-mark--radio {
+  border-radius: 50%;
+}
+
+.review-form__checkbox-input:checked + .control-mark::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 16px;
+  top: 16px;
+  left: 16px;
+
+  background-image: url("../images/check-mark.svg");
+}
+
+.review-form__radio-input:checked + .control-mark::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 16px;
+  left: 16px;
+
+  border-radius: 50%;
+  background-color: @text-secondary;
+}
+
+/* СОСТОЯНИЯ CONTROL */
+.review-form__checkbox-input,
+.review-form__radio-input {
+  &:hover ~ .control-mark {
+    background-color: @input-hover;
+  }
+
+  &:focus ~ .control-mark {
+    background-color: @main-bcg;
+    outline: 4px solid @input-hover;
+  }
+
+  &:active ~ .control-mark {
+    background-color: #d5d5d5;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:disabled ~ .control-mark {
+    opacity: 0.2;
+    cursor: default;
   }
 }
