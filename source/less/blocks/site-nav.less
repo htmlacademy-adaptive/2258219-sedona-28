@@ -61,10 +61,6 @@
   font-size: 18px;
   line-height: 26px;
 
-  &--current {
-    text-decoration: underline;
-  }
-
   &:hover {
     background-color: @main-hover;
   }
@@ -77,10 +73,22 @@
   &:disabled {
     background-color: @button-disabled;
   }
-}
 
-@media (min-width: @tablet-width) {
-  .site-nav__link {
+  &--current {
+    text-decoration: underline;
+    cursor: default;
+
+    &:hover {
+      background-color: @main-hover;
+    }
+
+    &:active {
+      background-color: @main-active;
+      color: @text-contrast;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
     color: @text-main;
     font-size: 14px;
     line-height: 21px;
@@ -102,7 +110,6 @@
     &--current {
       text-decoration: none;
       color: #766357;
-      cursor: default;
 
       &:hover {
         color: #766357;
