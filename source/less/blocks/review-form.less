@@ -134,7 +134,7 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     &--feelings {
       margin-bottom: 55px;
     }
@@ -237,8 +237,19 @@
   }
 }
 
+
+.review-form__footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .review-form__button {
   padding: 16px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
 
 .review-form__required-description {
@@ -313,6 +324,11 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  .review-form__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
