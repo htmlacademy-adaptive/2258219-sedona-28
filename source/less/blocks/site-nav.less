@@ -1,6 +1,8 @@
 .site-nav {
+  position: relative;
+  top: @menu-shift;
   padding: 0;
-  margin: 0;
+  margin: 0 0 @menu-shift;
   list-style: none;
 
   display: flex;
@@ -10,39 +12,124 @@
 }
 
 .site-nav__item {
-  padding: 17px 6px 12px;
-  text-align: center;
+  &:first-child {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  &:not(:first-child) {
+    &:not(:last-child) {
+      box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &:last-child {
+    position: relative;
+    box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 7px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+
+      @media (min-width: @tablet-width) {
+        content: none;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &:first-child,
+    &:not(:first-child):not(:last-child),
+    &:last-child {
+      box-shadow: none;
+    }
+  }
 }
 
 .site-nav__link {
+  display: block;
+  padding: 17px 6px 12px;
+  text-align: center;
+
   color: @text-contrast;
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  &--current {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    background-color: @main-hover;
+  }
+
+  &:active {
+    background-color: @main-active;
+    color: @text-active;
+  }
+
+  &:disabled {
+    background-color: @button-disabled;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-nav__link {
+    color: @text-main;
+    font-size: 14px;
+    line-height: 21px;
+
+    &:hover {
+      background-color: @main-bcg;
+      color: fade(#766357, 60%);
+    }
+
+    &:active {
+      background-color: @main-bcg;
+      color: fade(#766357, 30%);
+    }
+
+    &:disabled {
+      background-color: @main-bcg;
+    }
+
+    &--current {
+      text-decoration: none;
+      color: #766357;
+      cursor: default;
+
+      &:hover {
+        color: #766357;
+      }
+
+      &:active {
+        color: #766357;
+      }
+    }
+  }
 }
 
 /* МЕДИА СЕТКА НАВИГАЦИИ*/
 
 @media (min-width: @tablet-width) {
   .site-nav {
-    flex-direction: row;
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0;
+
     background-color: @main-bcg;
   }
 
   .site-nav__item {
-    padding: 18px 27px 17px 28px;
-  }
-
-  .site-nav__link {
-    color: @text-main;
-    font-size: 14px;
-    line-height: 21px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .site-nav__item {
-    padding: 18px 68px 17px;
+    &--form {
+      grid-column: 4/5;
+    }
   }
 }

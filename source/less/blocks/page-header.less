@@ -1,7 +1,50 @@
 .page-header {
   width: 100%;
+  min-height: 56px;
+  padding: 0;
 }
 
+.page-header__nav {
+  display: flex;
+  flex-direction: column;
+  min-height: 56px;
+}
+
+.page-header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+.page-header__toggle {
+  position: relative;
+  margin-left: calc(100% - 43px);
+  margin-top: 17px;
+  align-self: center;
+
+  width: 23px;
+  height: 4px;
+  background-color: @main-color;
+
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    left: 0;
+    top: 18px;
+
+    background-color: @main-color;
+  }
+
+  &::before {
+    top: 9px;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .page-header__toggle {
