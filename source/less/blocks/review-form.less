@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 0 20px;
   margin-bottom: 22px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -21,8 +22,8 @@
 .review-form__fieldset {
   position: relative;
 
-  padding: 0;
-  margin: 0 0 49px;
+  padding: 0 20px;
+  margin: 0 -20px 49px;
   border: none;
 
   &:first-child::before {
@@ -52,16 +53,11 @@
       background-color: @input-hover;
 
       @media (min-width: @tablet-width) {
-        left: auto;
-        right: -28.5px;
-        top: -54px;
-        bottom: 0;
-        width: 1px;
-        height: 125%;
+        content: none;
       }
 
       @media (min-width: @desktop-width) {
-        right: -49.5px;
+        content: none;
       }
     }
   }
@@ -149,10 +145,22 @@
 
 .review-form__userinfo-container {
   @media (min-width: @tablet-width) {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 58px;
     margin-bottom: 63px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: @input-hover;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -279,6 +287,10 @@
 .review-form__input {
   padding: 16px;
   border: none;
+
+  font-family: @main-font;
+  font-size: 18px;
+  line-height: 26px;
   font-weight: 700;
   background-color: @form-input;
 
