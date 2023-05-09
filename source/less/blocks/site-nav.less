@@ -10,6 +10,15 @@
   width: 100%;
 
   background-color: @main-color;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0;
+
+    background-color: @main-bcg;
+  }
 }
 
 .site-nav--closed {
@@ -61,6 +70,10 @@
     &:not(:first-child):not(:last-child),
     &:last-child {
       box-shadow: none;
+    }
+
+    &--form {
+      grid-column: 4/5;
     }
   }
 }
@@ -125,25 +138,6 @@
       &:active {
         color: #766357;
       }
-    }
-  }
-}
-
-/* МЕДИА СЕТКА НАВИГАЦИИ*/
-
-@media (min-width: @tablet-width) {
-  .site-nav {
-    position: static;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin: 0;
-
-    background-color: @main-bcg;
-  }
-
-  .site-nav__item {
-    &--form {
-      grid-column: 4/5;
     }
   }
 }

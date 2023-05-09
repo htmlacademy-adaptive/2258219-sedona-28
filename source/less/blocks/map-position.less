@@ -1,14 +1,12 @@
 .map-position {
   margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .map-position__image {
   display: block;
   margin: 0 auto;
-}
-
-@media (min-width: @tablet-width) {
-  .map-position {
-    margin-bottom: 0;
-  }
 }

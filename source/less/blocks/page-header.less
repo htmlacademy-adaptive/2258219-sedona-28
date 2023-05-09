@@ -15,6 +15,10 @@
   left: 50%;
   transform: translateX(-50%);
   top: 0;
+
+  @media (min-width: @tablet-width) {
+    z-index: 4;
+  }
 }
 
 .page-header__toggle {
@@ -46,6 +50,10 @@
   &::before {
     top: 9px;
   }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__toggle--opened {
@@ -72,15 +80,5 @@
 
   &::before {
     content: none;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-header__logo {
-    z-index: 4;
-  }
-
-  .page-header__toggle {
-    display: none;
   }
 }

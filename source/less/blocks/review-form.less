@@ -104,6 +104,61 @@
   &--comment {
     margin-bottom: 56px;
   }
+
+  @media (min-width: @tablet-width) {
+    &--introduce {
+      grid-column: 1/2;
+      margin: 0;
+    }
+
+    &--contacts {
+      grid-column: 2/3;
+      margin: 0;
+    }
+
+    &--feelings {
+      margin-bottom: 58px;
+      border-top: 1px solid @input-hover;
+    }
+
+    &--attractions {
+      margin-bottom: 52px;
+      border-top: 1px solid @input-hover;
+    }
+
+    &--comment {
+      margin-bottom: 48px;
+      border-top: 1px solid @input-hover;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--feelings {
+      margin-bottom: 83px;
+    }
+
+    &--attractions {
+      margin-bottom: 97px;
+    }
+
+    &--comment {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.review-form__userinfo-container {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 58px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 100px;
+    margin-bottom: 71px;
+  }
 }
 
 .review-form__title {
@@ -149,6 +204,40 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    &--feelings {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 36px 16px;
+      padding: 0 36px;
+    }
+
+    &--attractions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px 32px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--feelings {
+      gap: 36px 28px;
+      padding: 0 53px;
+    }
+
+    &--attractions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px 0;
+      padding: 0 44.5px;
+      max-width: none;
+    }
+  }
 }
 
 .review-form__item {
@@ -160,6 +249,15 @@
   &--checkbox {
     &:not(:last-child) {
       margin-bottom: 36px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--radio,
+    &--checkbox {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -241,6 +339,11 @@
 .review-form__footer {
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .review-form__button {
@@ -261,114 +364,6 @@
   color: fade(@text-secondary, 60%);
   text-transform: uppercase;
 }
-
-/* МЕДИА СЕТКА ФОРМЫ */
-
-@media (min-width: @tablet-width) {
-  .review-form__userinfo-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 58px;
-    margin-bottom: 63px;
-  }
-
-  .review-form__fieldset {
-    &--introduce {
-      grid-column: 1/2;
-      margin: 0;
-    }
-
-    &--contacts {
-      grid-column: 2/3;
-      margin: 0;
-    }
-
-    &--feelings {
-      margin-bottom: 58px;
-      border-top: 1px solid @input-hover;
-    }
-
-    &--attractions {
-      margin-bottom: 52px;
-      border-top: 1px solid @input-hover;
-    }
-
-    &--comment {
-      margin-bottom: 48px;
-      border-top: 1px solid @input-hover;
-    }
-  }
-
-  .review-form__list {
-    &--feelings {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 36px 16px;
-      padding: 0 36px;
-    }
-
-    &--attractions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px 32px;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-  }
-
-  .review-form__item {
-    &--radio,
-    &--checkbox {
-      &:not(:last-child) {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  .review-form__footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .review-form__userinfo-container {
-    gap: 100px;
-    margin-bottom: 71px;
-  }
-
-  .review-form__fieldset {
-    &--feelings {
-      margin-bottom: 83px;
-    }
-
-    &--attractions {
-      margin-bottom: 97px;
-    }
-
-    &--comment {
-      margin-bottom: 48px;
-    }
-  }
-
-  .review-form__list {
-    &--feelings {
-      gap: 36px 28px;
-      padding: 0 53px;
-    }
-
-    &--attractions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px 0;
-      padding: 0 44.5px;
-      max-width: none;
-    }
-  }
-}
-
 
 /* CONTROL-MARK */
 

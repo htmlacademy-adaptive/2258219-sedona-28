@@ -2,6 +2,14 @@
   padding: 0 20px;
   margin-bottom: 33px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 84px;
+  }
 }
 
 .video__title {
@@ -28,14 +36,3 @@
   margin: 0 auto;
 }
 
-@media (min-width: @tablet-width) {
-  .video {
-    margin-bottom: 40px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .video {
-    margin-bottom: 84px;
-  }
-}
