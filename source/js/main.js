@@ -1,6 +1,8 @@
-let navMain = document.querySelector('.site-nav');
-let navToggle = document.querySelector('.page-header__toggle');
+const pageHeader = document.querySelector('.page-header');
+const navMain = document.querySelector('.site-nav');
+const navToggle = document.querySelector('.page-header__toggle');
 
+pageHeader.classList.remove('page-header--nojs');
 navMain.classList.remove('site-nav--nojs');
 
 navToggle.addEventListener('click', function () {

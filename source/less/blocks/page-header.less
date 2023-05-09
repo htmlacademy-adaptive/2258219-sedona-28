@@ -1,13 +1,62 @@
 .page-header {
-  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
   min-height: 56px;
-  padding: 0;
+
+  &--nojs {
+    min-height: unset;
+    padding: 0;
+
+    .page-header__toggle {
+      display: none;
+    }
+
+    .page-header__nav {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: unset;
+    justify-content: unset;
+    padding: 0;
+
+    .page-header__nav {
+      width: 100%;
+    }
+  }
 }
 
-.page-header__nav {
-  display: flex;
-  flex-direction: column;
-  min-height: 56px;
+.page-header__toggle {
+  position: relative;
+  z-index: 2;
+  width: 23px;
+  height: 22px;
+  background-color: transparent;
+
+  border: none;
+  cursor: pointer;
+
+  &--opened {
+    .page-header__cross {
+      display: flex;
+    }
+
+    .page-header__burger {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__cross {
+  display: none;
 }
 
 .page-header__logo {
@@ -17,68 +66,6 @@
   top: 0;
 
   @media (min-width: @tablet-width) {
-    z-index: 4;
-  }
-}
-
-.page-header__toggle {
-  position: relative;
-  z-index: 3;
-  margin-left: calc(100% - 63px);
-  margin-top: 17px;
-  align-self: center;
-
-  width: 23px;
-  height: 4px;
-  background-color: @main-color;
-
-  border: none;
-  cursor: pointer;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 23px;
-    height: 4px;
-    left: 0;
-    top: 18px;
-
-    background-color: @main-color;
-  }
-
-  &::before {
-    top: 9px;
-  }
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.page-header__toggle--opened {
-  position: absolute;
-  width: 28px;
-  height: 4px;
-  right: 17px;
-  top: 9px;
-
-  background-color: @main-bcg;
-  transform: rotate(45deg);
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 28px;
-    height: 4px;
-    left: 0;
-    top: 0;
-
-    background-color: @main-bcg;
-    transform: rotate(-90deg);
-  }
-
-  &::before {
-    content: none;
+    z-index: 2;
   }
 }
