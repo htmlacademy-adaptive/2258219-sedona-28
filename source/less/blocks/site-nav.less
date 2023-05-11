@@ -10,7 +10,6 @@
   width: 100%;
 
   list-style: none;
-  background-color: @main-color;
 
   &--closed {
     display: none;
@@ -48,9 +47,31 @@
 
 .site-nav__item {
   display: flex;
-  padding: 17px 49px 12px; //49px для безопасного отступа от кнопки
   text-align: center;
   justify-content: center;
+  background-color: @main-color;
+
+  &:hover {
+    background-color: @main-hover;
+  }
+
+  &:active {
+    background-color: @main-active;
+    color: @text-active;
+  }
+
+  &--index,
+  &--gallery,
+  &--form {
+    &:hover {
+      background-color: @main-color;
+    }
+
+    &:active {
+      background-color: @main-color;
+      color: @text-contrast;
+    }
+  }
 
   &:first-child {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -69,6 +90,12 @@
   @media (min-width: @tablet-width) {
     width: 20%;
     padding: 17px 0 12px;
+    background-color: unset;
+
+    &:hover,
+    &:active {
+      background-color: unset;
+    }
 
     &:first-child,
     &:not(:first-child):not(:last-child),
@@ -88,29 +115,30 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  padding: 17px 49px 12px; //49px для безопасного отступа от кнопки
 
-  // &:hover {
-  //   background-color: @main-hover;
-  // }
+  &:hover {
+    background-color: @main-hover;
+  }
 
-  // &:active {
-  //   background-color: @main-active;
-  //   color: @text-active;
-  // }
+  &:active {
+    background-color: @main-active;
+    color: @text-active;
+  }
 
-  // &--current {
-  //   text-decoration: underline;
-  //   cursor: default;
+  &--current {
+    opacity: 0.6;
+    cursor: default;
 
-  //   &:hover {
-  //     background-color: @main-hover;
-  //   }
+    &:hover {
+      background-color: @main-color;
+    }
 
-  //   &:active {
-  //     background-color: @main-active;
-  //     color: @text-contrast;
-  //   }
-  // }
+    &:active {
+      background-color: @main-color;
+      color: @text-contrast;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -118,6 +146,7 @@
     color: @text-main;
     font-size: 14px;
     line-height: 21px;
+    background-color: unset;
 
     &:hover {
       background-color: @main-bcg;
