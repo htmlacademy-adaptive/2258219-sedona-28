@@ -273,6 +273,30 @@
 .review-form__label {
   display: flex;
   flex-direction: column;
+
+  &--phone,
+  &--email {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 58px;
+      height: 58px;
+      background-color: #e6e6e6;
+      background-image: url("../img/phone-icon.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--email {
+    &::after {
+      background-image: url("../img/email-icon.svg");
+    }
+  }
 }
 
 .review-form__naming {
@@ -293,6 +317,11 @@
   line-height: 26px;
   font-weight: 700;
   background-color: @form-input;
+
+  &--phone,
+  &--email {
+    padding-right: 70px;
+  }
 
   &:placeholder-shown {
     color: @placeholder;
@@ -407,12 +436,14 @@
 .review-form__checkbox-input:checked + .control-mark::after {
   content: "";
   position: absolute;
-  width: 22px;
-  height: 16px;
-  top: 16px;
-  left: 16px;
+  width: 46px;
+  height: 46px;
+  left: 0;
+  top: 0;
 
-  background-image: url("../images/check-mark.svg");
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .review-form__radio-input:checked + .control-mark::after {
