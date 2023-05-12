@@ -137,7 +137,34 @@
 }
 
 .advantages__subitem {
+  position: relative;
+  padding-left: 47px;
   color: @text-main;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 0;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--lodge::before {
+    background-image: url("../img/lodge-icon.svg");
+  }
+
+  &--food::before {
+    background-image: url("../img/food-icon.svg");
+  }
+
+  &--souvenir::before {
+    background-image: url("../img/souvenir-icon.svg");
+  }
 
   &:not(:last-child) {
     padding-bottom: 25px;
@@ -148,7 +175,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 33px;
+    padding: 135px 33px 60px;
     width: 33.33%;
     min-height: 330px;
 
@@ -156,6 +183,14 @@
 
     &:not(:last-child) {
       padding-bottom: 60px; /*из-за каскада переопределяем отдельно padding-bottom: 25px;*/
+    }
+
+    &::before {
+      width: 81px;
+      height: 75px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 60px;
     }
   }
 }
