@@ -9,8 +9,11 @@
 .page__body {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
   min-height: 100%;
   margin: 0 auto;
+
   background-color: @main-bcg;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
@@ -19,10 +22,6 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-
-  @media (min-width: @desktop-width) {
-    max-width: 1200px;
-  }
 }
 
 .page__main {

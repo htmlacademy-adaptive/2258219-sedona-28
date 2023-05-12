@@ -6,19 +6,30 @@
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body class="page__body">
     <!--PAGE HEADER-->
-    <header class="page-header">
+    <header class="page-header page-header--nojs">
       <a class="page-header__link" href="#">
         <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96">
       </a>
-      <nav class="page-header__nav">
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
-        </button>
 
-        <ul class="page-header__list site-nav">
-          <li class="site-nav__item">
+      <button class="page-header__toggle" type="button">
+        <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
+        <svg class="page-header__burger" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
+          <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
+          <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
+        </svg>
+
+        <svg class="page-header__cross" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z" fill="white"/>
+        </svg>
+      </button>
+
+      <nav class="page-header__nav">
+        <ul class="page-header__list site-nav site-nav--nojs site-nav--closed">
+          <li class="site-nav__item site-nav__item--index">
             <a class="site-nav__link site-nav__link--current">Главная</a>
           </li>
 
@@ -26,7 +37,7 @@
             <a class="site-nav__link" href="catalog.html">Фото и видео</a>
           </li>
 
-          <li class="site-nav__item">
+          <li class="site-nav__item site-nav__item">
             <a class="site-nav__link" href="form.html">Форма отзыва</a>
           </li>
 
@@ -47,18 +58,20 @@
         </div>
 
         <div class="intro__container">
-          <h1 class="intro__title">Седона — небольшой городок в Аризоне,
+          <h1 class="intro__title intro__title--index">Седона — небольшой городок в Аризоне,
             заслуживающий большего!</h1>
           <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
       </section>
 
+      <!-- ADVANTAGES -->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--wide">
             <div class="advantages__item-container">
-              <h3 class="advantages__title advantages__title--wide">Настоящий городок</h3>
+              <h3 class="advantages__title advantages__title--wide">Настоящий <br>городок</h3>
+              <span class="advantages__number advantages__number--wide">— №1 —</span>
               <p class="advantages__text advantages__text--wide">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
             <img class="advantages__image" src="img/photo-1-index.jpg" width="320" height="260" alt="Красивое заведение, окруженное природой">
@@ -66,16 +79,16 @@
             <!--SERVICE-->
             <ul class="advantages__sublist">
               <li class="advantages__subitem">
-                <h4 class="advantages__subtitle">Жильё</h4>
+                <h4 class="advantages__subtitle advantages__subitem--lodge">Жильё</h4>
                 <p class="advantages__subtext">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
 
-              <li class="advantages__subitem">
+              <li class="advantages__subitem advantages__subitem--food">
                 <h4 class="advantages__subtitle">Еда</h4>
                 <p class="advantages__subtext">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
               </li>
 
-              <li class="advantages__subitem">
+              <li class="advantages__subitem advantages__subitem--souvenir">
                 <h4 class="advantages__subtitle">Сувениры</h4>
                 <p class="advantages__subtext">Не только китайского, но и настоящего местного производства!</p>
               </li>
@@ -85,24 +98,28 @@
 
           <li class="advantages__item advantages__item--wide">
             <div class="advantages__item-container advantages__item-container--reverse">
-              <h3 class="advantages__title advantages__title--wide">Там есть мост дьявола</h3>
+              <h3 class="advantages__title advantages__title--wide">Там есть <br>мост дьявола</h3>
+              <span class="advantages__number advantages__number--wide">— №2 —</span>
               <p class="advantages__text advantages__text--wide">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
             <img class="advantages__image advantages__image--reverse" src="img/photo-4-catalog.jpg" width="320" height="260" alt="Каньон в Седоне">
           </li>
 
             <li class="advantages__item advantages__item--secondary">
-              <h3 class="advantages__title">Небольшая площадь</h3>
+              <h3 class="advantages__title">Небольшая <br>площадь</h3>
+              <span class="advantages__number">— №3 —</span>
               <p class="advantages__text">Все интересные места находятся очень близко</p>
             </li>
 
             <li class="advantages__item advantages__item--secondary">
-              <h3 class="advantages__title">Красивая дорога</h3>
+              <h3 class="advantages__title">Красивая <br>дорога</h3>
+              <span class="advantages__number">— №4 —</span>
               <p class="advantages__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
 
             <li class="advantages__item advantages__item--secondary">
-              <h3 class="advantages__title">Мало туристов</h3>
+              <h3 class="advantages__title">Мало <br>туристов</h3>
+              <span class="advantages__number">— №5 —</span>
               <p class="advantages__text">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
         </ul>
@@ -120,7 +137,9 @@
       <!--MAP POSITION-->
       <section class="map-position">
         <h2 class="visually-hidden">Расположение Седоны на карте</h2>
-        <img class="map-position__image" src="img/map.jpg" alt="" width="320" height="350"> <!--style="object-fit: cover"-->
+        <iframe class="map-position__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3346379.596123876!2d-113.44128490573793!3d35.00798616126225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1683824723729!5m2!1sru!2sru"
+        width="350" height="350" title="" allowfullscreen></iframe>
+
       </section>
     </main>
 
@@ -157,5 +176,9 @@
         <svg class="copyright__logo"></svg>
       </a>
     </footer>
+
+    <script src="../js/main.js"></script>
+    <!-- for less -->
+    <script src="../source/js/main.js"></script>
   </body>
 </html>
