@@ -7,19 +7,30 @@
     <link href="css/style.css" rel="stylesheet">
     <base href="https://htmlacademy-adaptive.github.io/2258219-sedona-28/5/">
 </head>
+
   <body class="page__body">
     <!--PAGE HEADER-->
-    <header class="page-header">
+    <header class="page-header page-header--nojs">
       <a class="page-header__link" href="#">
         <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96">
       </a>
-      <nav class="page-header__nav">
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
-        </button>
 
-        <ul class="page-header__list site-nav site-nav--nojs">
-          <li class="site-nav__item">
+      <button class="page-header__toggle" type="button">
+        <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
+        <svg class="page-header__burger" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
+          <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
+          <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
+        </svg>
+
+        <svg class="page-header__cross" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z" fill="white"/>
+        </svg>
+      </button>
+
+      <nav class="page-header__nav">
+        <ul class="page-header__list site-nav site-nav--nojs site-nav--closed">
+          <li class="site-nav__item site-nav__item--index">
             <a class="site-nav__link site-nav__link--current">Главная</a>
           </li>
 
@@ -27,7 +38,7 @@
             <a class="site-nav__link" href="catalog.html">Фото и видео</a>
           </li>
 
-          <li class="site-nav__item site-nav__item--form">
+          <li class="site-nav__item site-nav__item">
             <a class="site-nav__link" href="form.html">Форма отзыва</a>
           </li>
 
@@ -69,16 +80,16 @@
             <!--SERVICE-->
             <ul class="advantages__sublist">
               <li class="advantages__subitem">
-                <h4 class="advantages__subtitle">Жильё</h4>
+                <h4 class="advantages__subtitle advantages__subitem--lodge">Жильё</h4>
                 <p class="advantages__subtext">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
 
-              <li class="advantages__subitem">
+              <li class="advantages__subitem advantages__subitem--food">
                 <h4 class="advantages__subtitle">Еда</h4>
                 <p class="advantages__subtext">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
               </li>
 
-              <li class="advantages__subitem">
+              <li class="advantages__subitem advantages__subitem--souvenir">
                 <h4 class="advantages__subtitle">Сувениры</h4>
                 <p class="advantages__subtext">Не только китайского, но и настоящего местного производства!</p>
               </li>
@@ -127,7 +138,9 @@
       <!--MAP POSITION-->
       <section class="map-position">
         <h2 class="visually-hidden">Расположение Седоны на карте</h2>
-        <img class="map-position__image" src="img/map.jpg" alt="" width="320" height="350"> <!--style="object-fit: cover"-->
+        <iframe class="map-position__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3346379.596123876!2d-113.44128490573793!3d35.00798616126225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1683824723729!5m2!1sru!2sru"
+        width="350" height="350" title="" allowfullscreen></iframe>
+
       </section>
     </main>
 
@@ -165,6 +178,8 @@
       </a>
     </footer>
 
-    <!--<script src="../js/site-nav__script.js"></script>-->
+    <script src="../js/main.js"></script>
+    <!-- for less -->
+    <script src="../source/js/main.js"></script>
   </body>
 </html>
