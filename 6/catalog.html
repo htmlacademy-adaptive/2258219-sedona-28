@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Седона. Фото и Видео</title>
+    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 152×152 -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <link href="css/style.css" rel="stylesheet">
+    <base href="https://htmlacademy-adaptive.github.io/2258219-sedona-28/6/">
+</head>
+
+  <body class="page__body">
+    <!--PAGE HEADER-->
+    <header class="page-header page-header--nojs">
+      <a class="page-header__link" href="index.html">
+        <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96">
+      </a>
+
+      <button class="page-header__toggle" type="button">
+        <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
+        <svg class="page-header__burger" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
+          <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
+          <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
+        </svg>
+
+        <svg class="page-header__cross" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z" fill="white"/>
+        </svg>
+      </button>
+
+      <nav class="page-header__nav">
+        <ul class="page-header__list site-nav site-nav--nojs site-nav--closed">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+
+          <li class="site-nav__item site-nav__item--gallery">
+            <a class="site-nav__link site-nav__link--current">Фото и видео</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="form.html">Форма отзыва</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--MAIN CONTENT-->
+    <main class="page__main">
+      <section class="intro intro--catalog">
+        <div class="intro__image-container intro__image-container--inner intro__image-container--catalog">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/sedona-desktop.svg" width="459.5" height="80">
+            <source media="(min-width: 768px)" srcset="img/sedona-tablet.svg" width="457" height="77.5">
+            <img class="intro__image" src="img/sedona.svg" alt="Sedona" width="229" height="39">
+          </picture>
+        </div>
+
+        <div class="intro__container">
+          <h1 class="intro__title">Фото и видео</h1>
+          <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </div>
+      </section>
+
+      <!--GALLERY-->
+      <section class="gallery">
+        <h2 class="visually-hidden">Галерея фото</h2>
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <a class="gallery__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-1-catalog-desktop.jpg 1x, img/photo-1-catalog-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-catalog-tablet.jpg 1x, img/photo-1-catalog-tablet@2x.jpg 2x">
+                <img class="gallery__photo" src="img/photo-1-catalog.jpg" alt="Ровная дорога в даль в золотой час(закат)." width="280" height="280">
+              </picture>
+            </a>
+            <div class="gallery__photo-info">
+              <div class="gallery__info-text">
+                <h3 class="gallery__title">неродные просторы</h3>
+                <p class="gallery__text">Автор фото: <span class="gallery__author-name">Борис</span></p><!--span "author-name" добавлен для возможного оживлеления функции постирования фото-->
+              </div>
+              <span class="gallery__like">1350</span>
+            </div>
+          </li>
+
+          <li class="gallery__item">
+            <a class="gallery__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-2-catalog-desktop.jpg 1x, img/photo-2-catalog-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-catalog-tablet.jpg 1x, img/photo-2-catalog-tablet@2x.jpg 2x">
+                <img class="gallery__photo" src="img/photo-2-catalog.jpg" alt="Удивительный вид кактуса, похожий на дженгу спустя какое-то время игры." width="280" height="280">
+              </picture>
+            </a>
+            <div class="gallery__photo-info">
+              <div class="gallery__info-text">
+                <h3 class="gallery__title">Местная растительность</h3>
+                <p class="gallery__text">Автор фото: <span class="gallery__author-name">Сергей</span></p>
+              </div>
+              <span class="gallery__like">143</span>
+            </div>
+          </li>
+
+          <li class="gallery__item">
+            <a class="gallery__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-3-catalog-desktop.jpg 1x, img/photo-3-catalog-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-catalog-tablet.jpg 1x, img/photo-3-catalog-tablet@2x.jpg 2x">
+                <img class="gallery__photo" src="img/photo-3-catalog.jpg" alt="Закрученая посреди хвойного леса автомобильная дорога, идущая вокруг холма." width="280" height="280">
+              </picture>
+            </a>
+            <div class="gallery__photo-info">
+              <div class="gallery__info-text">
+                <h3 class="gallery__title">Дорога на север</h3>
+                <p class="gallery__text">Автор фото: <span class="gallery__author-name">Петр</span></p>
+              </div>
+              <span class="gallery__like">96</span>
+            </div>
+          </li>
+
+          <li class="gallery__item">
+            <a class="gallery__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-4-catalog-desktop.jpg 1x, img/photo-4-catalog-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-4-catalog-tablet.jpg 1x, img/photo-4-catalog-tablet@2x.jpg 2x">
+                <img class="gallery__photo" src="img/photo-4-catalog.jpg" alt="Равнина красных гор с обрывом." width="280" height="280">
+              </picture>
+            </a>
+            <div class="gallery__photo-info">
+              <div class="gallery__info-text">
+                <h3 class="gallery__title">Мост дьявола</h3>
+                <p class="gallery__text">Автор фото: <span class="gallery__author-name">Антон</span></p>
+              </div>
+              <span class="gallery__like">254</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!--VIDEO-->
+      <section class="video">
+        <h2 class="video__title">Все еще сомневаетесь?</h2>
+        <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+
+        <div class="video__content">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="video__image" src="img/video.jpg" alt="Вы едите по дороге, окруженной красными горами. Добро пожаловать в Седону!" width="280" height="177">
+          </picture>
+          <button class="video__play" type="button">
+            <span class="visually-hidden">Проиграть видео</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!--PAGE FOOTER-->
+    <footer class="page-footer">
+      <span class="page-footer__hashtag">#visitsedona</span>
+
+      <ul class="page-footer__socials social">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">В контакте</span>
+            <svg class="social__icon"></svg>
+          </a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Теллеграм</span>
+            <svg class="social__icon"></svg>
+          </a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Ютуб</span>
+            <svg class="social__icon"></svg>
+          </a>
+        </li>
+      </ul>
+
+      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text">Разработано</span>
+        <span class="visually-hidden">HTML-Academy</span>
+        <svg class="copyright__logo"></svg>
+      </a>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <!-- for less -->
+    <script src="../source/js/main.js"></script>
+  </body>
