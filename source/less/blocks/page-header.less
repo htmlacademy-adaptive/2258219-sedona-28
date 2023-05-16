@@ -17,6 +17,12 @@
     .page-header__nav {
       width: 100%;
     }
+
+    @media (max-width: 767px) {
+      .page-header__logo {
+        z-index: unset;
+      }
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -32,7 +38,7 @@
 
 .page-header__toggle {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   width: 23px;
   height: 22px;
   background-color: transparent;
@@ -61,8 +67,8 @@
 
 .page-header__logo {
   position: absolute;
-  z-index: 2;
   left: 50%;
   transform: translateX(-50%);
   top: 0;
+  z-index: 3;
 }
