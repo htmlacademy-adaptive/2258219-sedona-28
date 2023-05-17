@@ -312,7 +312,7 @@
   padding: 16px;
   border: none;
 
-  font-family: @main-font;
+  font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -349,7 +349,7 @@
   padding: 16px;
   border: none;
 
-  font-family: @main-font;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -390,6 +390,7 @@
 .review-form__button {
   padding: 16px;
   width: 100%;
+  font-family: inherit;
 
   @media (min-width: @tablet-width) {
     width: auto;
@@ -451,8 +452,9 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  top: 16px;
-  left: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   border-radius: 50%;
   background-color: @text-secondary;
