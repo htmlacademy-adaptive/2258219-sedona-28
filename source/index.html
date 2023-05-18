@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 152×152 -->
+    <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -74,7 +78,12 @@
               <span class="advantages__number advantages__number--wide">— №1 —</span>
               <p class="advantages__text advantages__text--wide">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img class="advantages__image" src="img/photo-1-index.jpg" width="320" height="260" alt="Красивое заведение, окруженное природой">
+            <picture class="advantages__image-container">
+              <source media="(min-width: 1200px)" srcset="img/photo-1-index-desktop.jpg 1x, img/photo-1-index-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-1-index-tablet.jpg 1x, img/photo-1-index-tablet@2x.jpg 2x">
+              <img class="advantages__image" src="img/photo-1-index.jpg" srcset="img/photo-1-index@2x.jpg 2x" width="320" height="260" alt="Красивое заведение, окруженное природой">
+            </picture>
+
 
             <!--SERVICE-->
             <ul class="advantages__sublist">
@@ -102,7 +111,11 @@
               <span class="advantages__number advantages__number--wide">— №2 —</span>
               <p class="advantages__text advantages__text--wide">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
-            <img class="advantages__image advantages__image--reverse" src="img/photo-4-catalog.jpg" width="320" height="260" alt="Каньон в Седоне">
+            <picture class="advantages__image-container">
+              <source media="(min-width: 1200px)" srcset="img/photo-2-index-desktop.jpg 1x, img/photo-2-index-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-2-index-tablet.jpg 1x, img/photo-2-index-tablet@2x.jpg 2x">
+              <img class="advantages__image advantages__image--reverse" src="img/photo-2-index.jpg" srcset="img/photo-2-index@2x.jpg 2x" width="320" height="260" alt="Каньон в Седоне">
+            </picture>
           </li>
 
             <li class="advantages__item advantages__item--secondary">
@@ -177,8 +190,6 @@
       </a>
     </footer>
 
-    <script src="../js/main.js"></script>
-    <!-- for less -->
-    <script src="../source/js/main.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

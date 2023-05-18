@@ -4,11 +4,11 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
+    margin: 0 60px 40px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 84px;
+    margin: 0 240px 84px;
   }
 }
 
@@ -32,6 +32,25 @@
   }
 }
 
+.video__content {
+  position: relative;
+}
+
 .video__image {
   margin: 0 auto;
+  width: 100%;
+}
+
+.video__play {
+  position: absolute;
+  width: 48px;
+  height: 54px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/play-button.svg");
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
