@@ -15,7 +15,8 @@
   <body class="page__body">
 
     <svg style="display: none;">
-      <symbol  viewBox="0 0 23 21" id="like-icon">
+
+      <symbol viewBox="0 0 23 21" id="like-icon">
         <path fill="#000000" d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z" opacity=".3"/></svg>
       </symbol>
 
@@ -49,6 +50,7 @@
         </defs>
       </symbol>
     </svg>
+
     <!--PAGE HEADER-->
     <header class="page-header page-header--nojs">
       <a class="page-header__link" href="#">
@@ -57,14 +59,12 @@
 
       <button class="page-header__toggle" type="button">
         <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
-        <svg class="page-header__burger" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
-          <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
-          <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
+        <svg class="page-header__burger" width="23" height="22">
+          <use html="img/sprite.js#burger"></use>
         </svg>
 
         <svg class="page-header__cross" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z" fill="white"/>
+          <use href="img/sprite.svg#cross">
         </svg>
       </button>
 
@@ -116,6 +116,7 @@
               <p class="advantages__text advantages__text--wide">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
             <picture class="advantages__image-container">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-index-desktop.webp">
               <source media="(min-width: 1200px)" srcset="img/photo-1-index-desktop.jpg 1x, img/photo-1-index-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-1-index-tablet.jpg 1x, img/photo-1-index-tablet@2x.jpg 2x">
               <img class="advantages__image" src="img/photo-1-index.jpg" srcset="img/photo-1-index@2x.jpg 2x" width="320" height="260" alt="Красивое заведение, окруженное природой">
@@ -149,6 +150,7 @@
               <p class="advantages__text advantages__text--wide">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
             <picture class="advantages__image-container">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-index-desktop.webp">
               <source media="(min-width: 1200px)" srcset="img/photo-2-index-desktop.jpg 1x, img/photo-2-index-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-2-index-tablet.jpg 1x, img/photo-2-index-tablet@2x.jpg 2x">
               <img class="advantages__image advantages__image--reverse" src="img/photo-2-index.jpg" srcset="img/photo-2-index@2x.jpg 2x" width="320" height="260" alt="Каньон в Седоне">
