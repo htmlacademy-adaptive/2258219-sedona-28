@@ -112,7 +112,25 @@
 }
 
 .gallery__like {
+  position: relative;
+  padding: 0 0 0 37px;
   font-weight: 700;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 21px;
+    left: 0;
+    bottom: 0;
+
+    mask-image: url("../img/sprite.svg#like-icon");
+    background-color: fade(@text-main, 30%);
+
+    @media (min-width: @desktop-width) {
+      background-color: @text-contrast;
+    }
+  }
 }
 
 .gallery__title,
