@@ -55,10 +55,6 @@
       @media (min-width: @tablet-width) {
         display: none;
       }
-
-      @media (min-width: @desktop-width) {
-        display: none;
-      }
     }
   }
 
@@ -286,15 +282,16 @@
       width: 58px;
       height: 58px;
       background-color: #e6e6e6;
-      background-image: url("../img/phone-icon.svg");
+      background-image: url("../img/sprite.svg#phone-icon");
       background-position: center;
       background-repeat: no-repeat;
+      background-size: 18px 18px;
     }
   }
 
   &--email {
     &::after {
-      background-image: url("../img/email-icon.svg");
+      background-image: url("../img/sprite.svg#email-icon");
     }
   }
 }
@@ -437,10 +434,11 @@
 .review-form__checkbox-input:checked + .control-mark::after {
   content: "";
   position: absolute;
-  width: 46px;
-  height: 46px;
-  left: 0;
-  top: 0;
+  width: 22px;
+  height: 16px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
   background-image: url("../img/sprite.svg#tick");
   background-repeat: no-repeat;
