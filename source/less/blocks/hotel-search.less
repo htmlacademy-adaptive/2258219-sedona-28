@@ -1,8 +1,10 @@
 .hotel-search {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 0 20px;
-  margin-bottom: 49px;
+  margin: 0 auto 49px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 55px;
@@ -36,9 +38,16 @@
   text-transform: uppercase;
   color: @text-secondary;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
-    font-size: 21px;
-    line-height: 26px;
+    max-width: 435px;
+
+    br {
+      display: block;
+    }
   }
 }
 
