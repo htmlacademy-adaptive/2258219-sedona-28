@@ -48,9 +48,17 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("../img/../img/sprite.svg#play-button");
+  mask-image: url("../img/../img/sprite.svg#play-button");
+  background-color: fade(@main-bcg, 70%);
 
   border: none;
-  background-color: transparent;
   cursor: pointer;
+
+  &:hover {
+    background-color: @main-bcg;
+  }
+
+  &:active {
+    background-color: fade(@main-bcg, 50%);
+  }
 }
