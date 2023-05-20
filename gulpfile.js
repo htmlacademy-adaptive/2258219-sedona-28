@@ -8,7 +8,7 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
-//import squoosh from 'gulp-libsquoosh';
+import squoosh from 'gulp-squoosh';
 //import svgo from 'gulp-svgmin';
 //import svgstore from 'gulp-svgstore';
 //import del from 'del';
@@ -41,8 +41,21 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
-  .pipe(terser)
+  .pipe(terser())
   .pipe(gulp.dest('build/js'))
+}
+
+//Images
+
+const optimizeImages = () => { //for server
+  return gulp.src('sourse/img/**/*.{jpg,png}')
+  .pipe(squoosh())
+  .pipe(gulp.dest('build/img'))
+}
+
+export const copyImages = () => { //for local
+  return gulp.src('sourse/img/**/*.{jpg,png}')
+  .pipe(gulp.dest('build/img'))
 }
 
 // Server
@@ -68,5 +81,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  scripts, html, styles, server, watcher
+  copyImages, scripts, html, styles, server, watcher
 );
