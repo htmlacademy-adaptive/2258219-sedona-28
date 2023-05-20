@@ -72,9 +72,10 @@
           <li class="gallery__item">
             <a class="gallery__photo-link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-catalog-desktop.webp">
                 <source media="(min-width: 1200px)" srcset="img/photo-1-catalog-desktop.jpg 1x, img/photo-1-catalog-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-1-catalog-tablet.jpg 1x, img/photo-1-catalog-tablet@2x.jpg 2x">
-                <img class="gallery__photo" src="img/photo-1-catalog.jpg 1x" srcset="img/photo-1-catalog@2x.jpg 2x" alt="Ровная дорога в даль в золотой час(закат)." width="280" height="280">
+                <img class="gallery__photo" src="img/photo-1-catalog.jpg" srcset="img/photo-1-catalog@2x.jpg 2x" alt="Ровная дорога в даль в золотой час(закат)." width="280" height="280">
               </picture>
             </a>
             <div class="gallery__photo-info">
@@ -146,6 +147,7 @@
 
         <div class="video__content">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop.webp">
             <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
             <img class="video__image" src="img/video.jpg" srcset="img/video@2x.jpg 2x" alt="Вы едите по дороге, окруженной красными горами. Добро пожаловать в Седону!" width="280" height="177">
@@ -165,21 +167,27 @@
         <li class="social__item">
           <a class="social__link" href="#">
             <span class="visually-hidden">В контакте</span>
-            <svg class="social__icon"></svg>
+            <svg class="social__icon" width="24" height="24">
+              <use href="img/sprite.svg#vk-icon"></use>
+            </svg>
           </a>
         </li>
 
         <li class="social__item">
           <a class="social__link" href="#">
             <span class="visually-hidden">Теллеграм</span>
-            <svg class="social__icon"></svg>
+            <svg class="social__icon" width="24" height="24">
+              <use href="img/sprite.svg#telegram-icon"></use>
+            </svg>
           </a>
         </li>
 
         <li class="social__item">
           <a class="social__link" href="#">
             <span class="visually-hidden">Ютуб</span>
-            <svg class="social__icon"></svg>
+            <svg class="social__icon" width="24" height="24">
+              <use href="img/sprite.svg#youtube-icon"></use>
+            </svg>
           </a>
         </li>
       </ul>
@@ -187,7 +195,9 @@
       <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано</span>
         <span class="visually-hidden">HTML-Academy</span>
-        <svg class="copyright__logo"></svg>
+        <svg class="copyright__logo" width="28" height="35">
+          <use href="img/sprite.svg#html-academy-logo"></use>
+        </svg>
       </a>
     </footer>
 
