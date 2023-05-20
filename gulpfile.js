@@ -53,7 +53,7 @@ const optimizeImages = () => { //for server
   .pipe(gulp.dest('build/img'))
 }
 
-export const copyImages = () => { //for local
+const copyImages = () => { //for local
   return gulp.src('sourse/img/**/*.{jpg,png}')
   .pipe(gulp.dest('build/img'))
 }
