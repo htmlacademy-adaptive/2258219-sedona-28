@@ -5,14 +5,13 @@ import postcss from 'gulp-postcss';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
-import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-// import svgstore from 'gulp-svgstore';
-import del from 'del';
-//import browser from 'browser sync';
+import { stacksvg } from 'gulp-stacksvg';
+import {deleteAsync as del} from 'del';
+import browser from 'browser-sync';
 
 // Styles
 
@@ -77,30 +76,28 @@ const svg = () => {
   .pipe(gulp.dest('build/img'));
 }
 
-const sprite = () => {
+const stack = () => {
   return gulp.src('source/img/icons/*.svg')
   .pipe(svgo())
-  .pipe(svgstore({
-    inlineSvg: true
-  })
-  )
-  .pipe(rename('sprite.svg'))
+  .pipe(stacksvg({
+    output: `sprite`
+  }))
   .pipe(gulp.dest('build/img'));
 }
 
-// //Copy
+//Copy
 
-// export const copy = (done) => {
-//   gulp.src([
-//     'source/fonts/*.{woff2,woff',
-//     'source/.ico',
-//   ], {
-//     base: 'source'
-//   })
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+  ], {
+    base: 'source'
+  })
 
-//   .pipe(gulp.dest('build'))
-//   done();
-// }
+  .pipe(gulp.dest('build'))
+  done();
+}
 
 //Clean
 
@@ -133,14 +130,14 @@ const watcher = () => {
 
 export const build = gulp.series(
   clean,
-  // copy,
+  copy,
   copyImages,
   gulp.parallel(
     styles,
     html,
     scripts,
     svg,
-    // sprite,
+    stack,
     createWebp
   ),
 );
@@ -148,14 +145,14 @@ export const build = gulp.series(
 //Default
 export default gulp.series(
   clean,
-  // copy,
+  copy,
   optimizeImages,
   gulp.parallel(
     styles,
     html,
     scripts,
     svg,
-    sprite,
+    stack,
     createWebp
   ),
   gulp.series(
