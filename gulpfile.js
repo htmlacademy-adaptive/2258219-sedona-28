@@ -16,7 +16,7 @@ import del from 'del';
 
 // Styles
 
-const styles = () => {
+export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
@@ -129,7 +129,36 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
+//Build
 
-export default gulp.series(
-  copyImages, scripts, html, styles, server, watcher
+export const build = gulp.series(
+  clean,
+  // copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    // sprite,
+    createWebp
+  ),
 );
+
+//Default
+export default gulp.series(
+  clean,
+  // copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
