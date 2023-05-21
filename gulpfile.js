@@ -11,7 +11,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 // import svgstore from 'gulp-svgstore';
-//import del from 'del';
+import del from 'del';
 //import browser from 'browser sync';
 
 // Styles
@@ -93,7 +93,7 @@ const sprite = () => {
 // export const copy = (done) => {
 //   gulp.src([
 //     'source/fonts/*.{woff2,woff',
-//     'source/.ico'
+//     'source/.ico',
 //   ], {
 //     base: 'source'
 //   })
@@ -101,6 +101,12 @@ const sprite = () => {
 //   .pipe(gulp.dest('build'))
 //   done();
 // }
+
+//Clean
+
+const clean = () => {
+  return del('build');
+};
 
 // Server
 
