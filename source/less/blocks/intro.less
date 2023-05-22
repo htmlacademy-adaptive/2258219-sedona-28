@@ -79,6 +79,10 @@
   background-position: bottom;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-bcg@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 518px;
     background-image: url("../img/main-bcg-tablet.jpg");
@@ -176,11 +180,7 @@
     background-image: url("../img/sprite.svg#intro-triangle");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: 1200px 57px;
-  }
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/main-bcg@2x.jpg");
+    background-size: 1201px 57px;
   }
 }
 
