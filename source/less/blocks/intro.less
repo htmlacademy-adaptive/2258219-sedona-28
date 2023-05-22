@@ -190,7 +190,16 @@
 }
 
 .intro__container {
-  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 284px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 520px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 484px;
+  }
 }
 
 .intro__title {
