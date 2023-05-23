@@ -54,6 +54,12 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
+
+    &:not(:first-child) {
+      .gallery__photo-info {
+        padding: 17px 21px 17px 25px;
+      }
+    }
   }
 }
 
@@ -104,10 +110,6 @@
     bottom: 0;
 
     background-color: fade(#000000, 30%);
-
-    &:not(:first-child) {
-      padding: 17px 25px;
-    }
   }
 }
 
