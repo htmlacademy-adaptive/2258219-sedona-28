@@ -21,10 +21,11 @@
   height: 48px;
 
   &:hover {
-    opacity: 0.6;
+    background-color: @main-hover;
   }
 
   &:active {
-    opacity: 0.3;
+    background-color: @main-active;
+    color: fade(@text-contasr, 30%);
   }
 }

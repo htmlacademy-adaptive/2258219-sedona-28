@@ -128,7 +128,7 @@
   }
 
   &--current {
-    color: rgba(255, 255, 255, 0.6);
+    color: fade(@text-contrast, 60%);
     cursor: default;
 
     &:hover {
@@ -151,12 +151,12 @@
 
     &:hover {
       background-color: @main-bcg;
-      color: fade(#766357, 60%);
+      color: @main-color;
     }
 
     &:active {
       background-color: @main-bcg;
-      color: fade(#766357, 30%);
+      color: fade(@text-main, 30%);
     }
 
     &--current {
