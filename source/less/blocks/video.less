@@ -1,6 +1,6 @@
 .video {
   padding: 0 20px;
-  margin-bottom: 33px;
+  margin: 0 0 -6px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -14,7 +14,7 @@
 
 .video__title {
   font-weight: 700;
-  margin: 0 0 38px;
+  margin: 0 0 26px;
   font-size: 18px;
   line-height: 26px;
 
@@ -24,11 +24,13 @@
 }
 
 .video__text {
-  margin: 0 0 38px;
+  margin: 0 auto 39px;
+  max-width: 266px;
   color: @text-secondary;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 93px;
+    max-width: 266px;
   }
 }
 
@@ -45,9 +47,9 @@
   position: absolute;
   width: 48px;
   height: 54px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 49.5%;
+  top: 49.5%;
+  transform: translate(-49.5%, -53%);
   mask-image: url("../img/sprite.svg#play-button");
   background-color: fade(@main-bcg, 70%);
 

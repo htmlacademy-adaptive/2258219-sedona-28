@@ -1,95 +1,99 @@
 .intro {
   position: relative;
   text-align: center;
+}
 
-  &--index {
-    padding: 0 0 25px;
+.intro--index {
+  padding: 0 0 25px;
 
-    &::after {
-      position: absolute;
-      z-index: 1;
-      content: "";
-      width: 100%;
-      height: 37px;
-      left: 0;
-      right: 0;
-      bottom: -25px;
+  &::after {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: 100%;
+    height: 37px;
+    left: 0;
+    right: 0;
+    bottom: -25px;
 
-      background-color: @main-color;
-      background-image: url("../img/sprite.svg#bottom-flag");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 100% 100%;
-
-      @media (min-width: @tablet-width) {
-        display: none;
-      }
-    }
-
-    .intro__container {
-      margin: 0 auto;
-      max-width: 284px;
-
-      @media (min-width: @tablet-width) {
-        max-width: 520px;
-      }
-
-      @media (min-width: @desktop-width) {
-        max-width: 484px;
-      }
-    }
+    background-color: @main-color;
+    background-image: url("../img/sprite.svg#bottom-flag");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
 
     @media (min-width: @tablet-width) {
-      padding: 0 0 55.5px;
-      margin: 0;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding: 0 0 44px;
+      display: none;
     }
   }
 
-  &--catalog {
-    padding: 0 0 42px;
+  @media (min-width: @tablet-width) {
+    padding: 0 0 55.5px;
+    margin: 0;
+  }
 
-    .intro__container {
-      margin: 0 auto;
-      max-width: 280px;
+  @media (min-width: @desktop-width) {
+    padding: 0 0 44px;
+  }
 
-      @media (min-width: @tablet-width) {
-        max-width: 458px;
-      }
-    }
+  .intro__container {
+    margin: 0 auto;
+    max-width: 284px;
 
     @media (min-width: @tablet-width) {
-      padding: 0 0 86px;
-      margin: 0;
+      max-width: 520px;
     }
 
     @media (min-width: @desktop-width) {
-      padding: 0 0 94px;
+      max-width: 484px;
+    }
+  }
+}
+
+.intro--catalog {
+  padding: 0 0 36px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 86px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 94px;
+  }
+
+  .intro__container {
+    margin: 0 auto;
+    max-width: 280px;
+
+    @media (min-width: @tablet-width) {
+      max-width: 458px;
     }
   }
 
-  &--form {
-    padding: 0 0 53px;
+  .intro__title {
+    margin: 0 auto 25px;
+  }
+}
 
-    .intro__container {
-      margin: 0 auto;
-      max-width: 280px;
+.intro--form {
+  padding: 0 0 53px;
 
-      @media (min-width: @tablet-width) {
-        max-width: 436px;
-      }
-    }
+  @media (min-width: @tablet-width) {
+    padding: 0 0 108px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 68px;
+  }
+
+  .intro__container {
+    margin: 0 auto;
+    max-width: 280px;
 
     @media (min-width: @tablet-width) {
-      padding: 0 0 108px;
-      margin: 0;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding: 0 0 68px;
+      max-width: 436px;
     }
   }
 }
@@ -109,6 +113,20 @@
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: 100%;
+    height: 57px;
+    left: 0;
+    bottom: -1px;
+    background-image: url("../img/sprite.svg#intro-triangle");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 1201px 57px;
+  }
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/main-bcg@2x.jpg");
@@ -130,88 +148,79 @@
       background-image: url("../img/main-bcg-desktop@2x.jpg");
     }
   }
+}
 
-  &--inner {
-    margin-bottom: 36px;
-    background-position: 0 100%;
-    min-height: 158px;
+.intro__image-container--index {
+  margin: 0 0 32px;
 
+  @media (min-width: @tablet-width) {
+    margin: 0 0 47.5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 59px;
+  }
+
+  .intro__image {
     @media (min-width: @tablet-width) {
-      min-height: 290px;
-    }
-
-    @media (min-width: @desktop-width) {
-      min-height: 301px;
-    }
-
-    .intro__image {
-      @media (min-width: @tablet-width) {
-        min-width: 457px;
-        min-height: 77.5px;
-      }
-
-      @media (min-width: @desktop-width) {
-        min-width: 460px;
-        min-height: 80px;
-      }
+      min-width: 460px;
+      min-height: 350px;
     }
   }
 
-  &--index {
-    margin: 0 0 32px;
+  .intro__title {
+    margin: 0 auto 37px;
+  }
+}
 
+.intro__image-container--inner {
+  padding: 4px 19px 19px;
+  margin: 0 0 36px;
+  background-position: 0 100%;
+  min-height: 158px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 301px;
+  }
+
+  .intro__image {
     @media (min-width: @tablet-width) {
-      margin: 0 0 47.5px;
+      min-width: 457px;
+      min-height: 77.5px;
     }
 
     @media (min-width: @desktop-width) {
-      margin: 0 0 59px;
-    }
-
-    .intro__image {
-      @media (min-width: @tablet-width) {
-        min-width: 460px;
-        min-height: 350px;
-      }
+      min-width: 460px;
+      min-height: 80px;
     }
   }
+}
 
-  &--catalog {
-    margin: 0 0 37px;
+.intro__image-container--catalog {
+  margin: 0 0 37px;
 
-    @media (min-width: @tablet-width) {
-      margin: 0 0 66px;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin: 0 0 100px;
-    }
+  @media (min-width: @tablet-width) {
+    margin: 0 0 66px;
   }
 
-  &--form {
-    margin: 0 0 36px;
+  @media (min-width: @desktop-width) {
+    margin: 0 0 100px;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      margin: 0 0 64px;
-    }
+.intro__image-container--form {
+  margin: 0 0 36px;
 
-    @media (min-width: @desktop-width) {
-      margin: 0 0 115px;
-    }
+  @media (min-width: @tablet-width) {
+    margin: 0 0 64px;
   }
 
-  &::after {
-    position: absolute;
-    z-index: 1;
-    content: "";
-    width: 100%;
-    height: 57px;
-    left: 0;
-    bottom: -1px;
-    background-image: url("../img/sprite.svg#intro-triangle");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 1201px 57px;
+  @media (min-width: @desktop-width) {
+    margin: 0 0 115px;
   }
 }
 
@@ -221,7 +230,6 @@
 }
 
 .intro__title {
-  margin: 0 auto 37px;
   max-width: 264px;
   font-weight: 700;
   font-size: 18px;
