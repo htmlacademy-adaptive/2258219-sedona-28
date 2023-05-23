@@ -58,7 +58,7 @@
   padding: 0 0 36px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 0 86px;
+    padding: 0 0 81px;
     margin: 0;
   }
 
@@ -78,8 +78,28 @@
   .intro__title {
     margin: 0 auto 25px;
 
+    br {
+      display: none;
+    }
+
     @media (min-width: @tablet-width) {
-      margin: 0 auto 22px;
+      margin: 0 auto 32px;
+
+      br {
+        display: block;
+      }
+    }
+  }
+
+  .intro__text {
+    br {
+      display: none;
+    }
+
+    @media (min-width: @tablet-width) {
+      br {
+        display: block;
+      }
     }
   }
 }
