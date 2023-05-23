@@ -98,26 +98,30 @@
   @media (min-width: @tablet-width) {
     &--introduce {
       grid-column: 1/2;
+      padding: 0;
       margin: 0;
     }
 
     &--contacts {
       grid-column: 2/3;
+      padding: 0;
       margin: 0;
     }
 
     &--feelings {
-      margin-bottom: 58px;
+      padding: 0;
+      margin: 0 0 58px;
       border-top: 1px solid @input-hover;
     }
 
     &--attractions {
-      margin-bottom: 52px;
+      margin: 0 0 52px;
       border-top: 1px solid @input-hover;
     }
 
     &--comment {
-      margin-bottom: 48px;
+      padding: 0;
+      margin: 0 0 39px;
       border-top: 1px solid @input-hover;
     }
   }
@@ -211,8 +215,7 @@
     &--feelings {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 36px 16px;
+      gap: 36px 50px;
       padding: 0 36px;
     }
 
@@ -381,7 +384,7 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 1fr;
     gap: 20px;
   }
 }
@@ -397,13 +400,17 @@
 }
 
 .review-form__required-description {
-  margin-left: auto;
+  margin: 6px 0 0 auto;
   align-self: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
   color: fade(@text-secondary, 60%);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+  }
 }
 
 /* CONTROL-MARK */

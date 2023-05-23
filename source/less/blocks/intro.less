@@ -48,6 +48,10 @@
       max-width: 484px;
     }
   }
+
+  .intro__title {
+    max-width: 264px;
+  }
 }
 
 .intro--catalog {
@@ -73,6 +77,10 @@
 
   .intro__title {
     margin: 0 auto 25px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 auto 22px;
+    }
   }
 }
 
@@ -99,6 +107,10 @@
 
   .intro__title {
     margin: 0 auto 25px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 auto 22px;
+    }
   }
 }
 
@@ -185,6 +197,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 290px;
+    padding: 0 19px 19px;
   }
 
   @media (min-width: @desktop-width) {
@@ -234,7 +247,6 @@
 }
 
 .intro__title {
-  max-width: 264px;
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;

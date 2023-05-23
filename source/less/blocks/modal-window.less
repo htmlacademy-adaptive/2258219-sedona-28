@@ -29,7 +29,7 @@
   min-height: 280px;
 
   @media (min-width: @tablet-width) {
-    padding: 54px 0 49px;
+    padding: 38px 0 49px;
     width: 400px;
     min-height: 347px;
   }
@@ -40,6 +40,7 @@
 
   .modal-window__title {
     @media (min-width: @tablet-width) {
+      margin: 0 auto 24px;
       max-width: 307px;
     }
   }
@@ -49,12 +50,18 @@
     max-width: 237px;
 
     @media (min-width: @tablet-width) {
-      margin: 0 auto 46px;
+      margin: 0 auto 56px;
       max-width: 307px;
     }
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @desktop-width) {
       margin: 0 auto 52px;
+    }
+  }
+
+  .modal-window__button {
+    @media (min-width: @tablet-width) {
+      width: 272px;
     }
   }
 }
@@ -64,13 +71,19 @@
   min-height: 323px;
 
   @media (min-width: @tablet-width) {
-    padding: 53px 0 0;
+    padding: 43px 0 0;
     width: 640px;
     min-height: 347px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 51px 0 0;
+    padding: 43px 0 0;
+  }
+
+  .modal-window__title {
+    @media (min-width: @tablet-width) {
+      margin: 0 auto 22px;
+    }
   }
 
   .modal-window__text {
@@ -78,11 +91,11 @@
     max-width: 244px;
 
     @media (min-width: @tablet-width) {
-      margin: 0 auto 54px;
+      margin: 0 auto 52px;
       max-width: 444px;
     }
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @desktop-width) {
       margin: 0 auto 32px;
     }
   }
@@ -129,4 +142,8 @@
   font-family: inherit;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
