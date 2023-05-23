@@ -6,7 +6,7 @@
 
   font-weight: 700;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 27px;
   text-transform: none;
 
   @media (min-width: @tablet-width) {
@@ -136,7 +136,8 @@
     }
 
     &--comment {
-      margin-bottom: 48px;
+      margin: 0 auto 39px;
+      max-width: 768px;
     }
   }
 }
@@ -230,7 +231,7 @@
 
   @media (min-width: @desktop-width) {
     &--feelings {
-      gap: 36px 28px;
+      gap: 36px 64px;
       padding: 0 53px;
     }
 
@@ -239,7 +240,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 36px 20px;
-      padding: 0 44.5px;
+      padding: 0 25px;
       max-width: none;
     }
   }
@@ -381,6 +382,8 @@
 .review-form__footer {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 768px;
 
   @media (min-width: @tablet-width) {
     display: grid;
