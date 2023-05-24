@@ -10,8 +10,8 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 152×152 -->
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="preload" href="fonts/ptsans.woff2" as="font">
-    <link rel="preload" as="image" href="img/main-bcg.jpg">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -157,9 +157,18 @@
       <!--MAP POSITION-->
       <section class="map-position">
         <h2 class="visually-hidden">Расположение Седоны на карте</h2>
-        <iframe class="map-position__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3346379.596123876!2d-113.44128490573793!3d35.00798616126225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1683824723729!5m2!1sru!2sru"
-        width="350" height="350" title="Седона на карте Гугл." allowfullscreen></iframe>
-
+          <iframe class="map-position__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3346379.596123876!2d-113.44128490573793!3d35.00798616126225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1683824723729!5m2!1sru!2sru"
+          width="350" height="350" title="Седона на карте Гугл." allowfullscreen></iframe>
+          <noscript>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
+              <img src="img/map.jpg" srcset="img/map@2x.jpg 2x" alt="Седона назодится в Аризоне" width="320" height="350">
+            </picture>
+          </noscript>
       </section>
     </main>
 
