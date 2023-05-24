@@ -416,48 +416,6 @@
   cursor: pointer;
 }
 
-.control-mark {
-  position: absolute;
-  width: 46px;
-  height: 46px;
-  top: -9px;
-  left: 0;
-
-  border-radius: 4px;
-  background-color: @form-input;
-}
-
-.control-mark--radio {
-  border-radius: 50%;
-}
-
-.review-form__checkbox-input:checked + .control-mark::after {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 16px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  background-image: url("../img/sprite.svg#tick");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.review-form__radio-input:checked + .control-mark::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  border-radius: 50%;
-  background-color: @text-secondary;
-}
-
 /* СОСТОЯНИЯ CONTROL */
 .review-form__checkbox-input,
 .review-form__radio-input {
