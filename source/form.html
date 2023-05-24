@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона. Форма отзыва</title>
     <meta name="description" content="Ваше мнение помогает не только нашим отелям стать лучше, но и привлечь внимание путешественников.">
-    <meta name="theme-color" content="#81b3d2"/>
+    <meta name="theme-color" content="#81b3d2">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 152×152 -->
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
-    <link rel="preload" as="image" href="img/main-bcg.jpg" imagesrcset="img/main-bcg@2.jpg 2x, img/main-bcg-tablet.jpg 1x, img/main-bcg-tablet@2.jpg 2x, img/main-bcg-desktop.jpg 1x, img/main-bcg-desktop@2.jpg 2x">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" as="image" href="img/main-bcg.jpg">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -29,7 +29,7 @@
         </svg>
 
         <svg class="page-header__cross" width="23" height="23">
-          <use href="img/sprite.svg#cross-icon">
+          <use href="img/sprite.svg#cross-icon"></use>
         </svg>
       </button>
 
@@ -243,7 +243,7 @@
     <!--MODAL ERROR-->
     <section class="review-form__modal-window modal-window">
       <div class="modal-window__content modal-window__content--error">
-        <h2 class="modal-window__title">Что-то пошло не&nbspтак!</h2>
+        <h2 class="modal-window__title">Что-то пошло не&nbsp;так!</h2>
         <p class="modal-window__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
 
         <button class="modal-window__button button modal-window__button--error" type="button">ОК</button>
@@ -254,7 +254,7 @@
     <section class="review-form__modal-window modal-window">
       <div class="modal-window__content modal-window__content--success">
         <h2 class="modal-window__title">Ваш отзыв отправлен!</h2>
-        <p class="modal-window__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbspближайшее время мы опубликуем его на сайте</p>
+        <p class="modal-window__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте</p>
 
         <div class="modal-window__button-wrapper">
           <button class="modal-window__button button modal-window__button--success" type="button">Закрыть окно</button>
