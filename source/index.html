@@ -4,10 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <meta name="description" content="Устали от туристов у Гранд Каньона? Мы приглашаем вас в Седону! Рассмотрим 5 причин, по которым это место настолько замечательно.">
+    <meta name="theme-color" content="#81b3d2">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 152×152 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -16,7 +20,7 @@
     <!--PAGE HEADER-->
     <header class="page-header page-header--nojs">
       <a class="page-header__link" href="#">
-        <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96">
+        <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона." width="185" height="96">
       </a>
 
       <button class="page-header__toggle" type="button">
@@ -26,7 +30,7 @@
         </svg>
 
         <svg class="page-header__cross" width="23" height="23">
-          <use href="img/sprite.svg#cross-icon">
+          <use href="img/sprite.svg#cross-icon"></use>
         </svg>
       </button>
 
@@ -57,12 +61,12 @@
       <!--INTRODUCTION-->
       <section class="intro intro--index">
         <div class="intro__image-container intro__image-container--index">
-          <img class="intro__image" src="img/welcome.svg" alt="Welcome to the gorgeuos Sedona q:because the Grand Canyon sucks" width="282" height="214">
+          <img class="intro__image" src="img/welcome.svg" alt="Welcome to the gorgeuos Sedona q:because the Grand Canyon sucks." width="282" height="214">
         </div>
 
         <div class="intro__container">
-          <h1 class="intro__title intro__title--index">Седона — небольшой городок&nbspв Аризоне,<br>
-            заслуживающий большего!</h1>
+          <h1 class="intro__title intro__title--index">Седона — небольшой городок в Аризоне,
+            заслуживающий&nbsp;большего!</h1>
           <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
       </section>
@@ -73,9 +77,9 @@
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--wide">
             <div class="advantages__item-container">
-              <h3 class="advantages__title advantages__title--wide">Настоящий <br>городок</h3>
+              <h3 class="advantages__title advantages__title--wide">Настоящий&nbsp;<br>городок</h3>
               <span class="advantages__number advantages__number--wide">— №1 —</span>
-              <p class="advantages__text advantages__text--wide">Седона — не аттракцион для туристов, там течет своя жизнь</p>
+              <p class="advantages__text advantages__text--wide">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <picture class="advantages__image-container">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-index-desktop.webp 1x, img/photo-1-index-desktop@2x.webp 2x">
@@ -83,58 +87,58 @@
               <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-index-tablet.webp 1x, img/photo-1-index-tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/photo-1-index-tablet.jpg 1x, img/photo-1-index-tablet@2x.jpg 2x">
               <source type="image/webp" srcset="img/photo-1-index.webp 1x, img/photo-1-index@2x.webp 2x">
-              <img class="advantages__image" src="img/photo-1-index.jpg" srcset="img/photo-1-index@2x.jpg 2x" width="320" height="260" alt="Красивое заведение, окруженное природой">
+              <img class="advantages__image" src="img/photo-1-index.jpg" srcset="img/photo-1-index@2x.jpg 2x" width="320" height="260" alt="Красивое заведение, окруженное природой.">
             </picture>
 
             <!--SERVICE-->
             <ul class="advantages__sublist">
-              <li class="advantages__subitem">
-                <h4 class="advantages__subtitle advantages__subitem--lodge">Жилье</h4>
+              <li class="advantages__subitem advantages__subitem--lodge">
+                <h4 class="advantages__subtitle">Жилье</h4>
                 <p class="advantages__subtext">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
 
               <li class="advantages__subitem advantages__subitem--food">
                 <h4 class="advantages__subtitle">Еда</h4>
-                <p class="advantages__subtext">Всегда заказывайте фирменный бургер, вы&nbspне&nbspразочаруетесь!</p>
+                <p class="advantages__subtext">Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
               </li>
 
               <li class="advantages__subitem advantages__subitem--souvenir">
                 <h4 class="advantages__subtitle">Сувениры</h4>
-                <p class="advantages__subtext">Не только китайского, но&nbspи местного производства!</p>
+                <p class="advantages__subtext">Не только китайского,&nbsp;<br>но и местного производства!</p>
               </li>
             </ul>
           </li>
 
           <li class="advantages__item advantages__item--wide">
             <div class="advantages__item-container advantages__item-container--reverse">
-              <h3 class="advantages__title advantages__title--wide">Там есть <br>мост дьявола</h3>
+              <h3 class="advantages__title advantages__title--wide">Там есть&nbsp;<br>мост дьявола</h3>
               <span class="advantages__number advantages__number--wide">— №2 —</span>
               <p class="advantages__text advantages__text--wide">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <picture class="advantages__image-container">
-              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-index-desktop.webp, img/photo-2-index-desktop@2x.webp">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-index-desktop.webp 1x, img/photo-2-index-desktop@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-2-index-desktop.jpg 1x, img/photo-2-index-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-2-index-tablet.webp 1x, img/photo-2-index-tablet@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-index-tablet.jpg 1x, img/photo-2-index-tablet@2x.jpg 2x">
               <source type="image/webp" srcset="img/photo-2-index.webp 1x, img/photo-2-index@2x.webp 2x">
-              <img class="advantages__image advantages__image--reverse" src="img/photo-2-index.jpg" srcset="img/photo-2-index@2x.jpg 2x" width="320" height="260" alt="Каньон в Седоне">
+              <img class="advantages__image advantages__image--reverse" src="img/photo-2-index.jpg" srcset="img/photo-2-index@2x.jpg 2x" width="320" height="260" alt="Каньон в Седоне.">
             </picture>
           </li>
 
             <li class="advantages__item advantages__item--secondary">
-              <h3 class="advantages__title">Небольшая <br>площадь</h3>
+              <h3 class="advantages__title">Небольшая&nbsp;<br>площадь</h3>
               <span class="advantages__number">— №3 —</span>
               <p class="advantages__text">Все интересные места находятся очень близко</p>
             </li>
 
             <li class="advantages__item advantages__item--secondary">
-              <h3 class="advantages__title">Красивая <br>дорога</h3>
+              <h3 class="advantages__title">Красивая&nbsp;<br>дорога</h3>
               <span class="advantages__number">— №4 —</span>
-              <p class="advantages__text">Ехать в Седону из Лас-Вегаса<br> совсем не&nbspскучно!</p>
+              <p class="advantages__text">Ехать в Седону из Лас-Вегаса&nbsp;<br>совсем не&nbsp;скучно!</p>
             </li>
 
             <li class="advantages__item advantages__item--secondary">
-              <h3 class="advantages__title">Мало <br>туристов</h3>
+              <h3 class="advantages__title">Мало&nbsp;<br>туристов</h3>
               <span class="advantages__number">— №5 —</span>
               <p class="advantages__text">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
@@ -144,7 +148,7 @@
       <!--HOTEL SEARCH-->
       <section class="hotel-search">
         <h2 class="hotel-search__title">Заинтересовались?</h2>
-        <p class="hotel-search__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие
+        <p class="hotel-search__text">Укажите предполагаемые даты поездки,&nbsp;<br>и мы покажем вам лучшие
           предложения гостиниц в Седоне</p>
 
         <a class="hotel-search__link button" href="#">Найти гостиницу</a>
@@ -153,9 +157,18 @@
       <!--MAP POSITION-->
       <section class="map-position">
         <h2 class="visually-hidden">Расположение Седоны на карте</h2>
-        <iframe class="map-position__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3346379.596123876!2d-113.44128490573793!3d35.00798616126225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1683824723729!5m2!1sru!2sru"
-        width="350" height="350" title="" allowfullscreen></iframe>
-
+          <iframe class="map-position__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3346379.596123876!2d-113.44128490573793!3d35.00798616126225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1683824723729!5m2!1sru!2sru"
+          width="350" height="350" title="Седона на карте Гугл." allowfullscreen></iframe>
+          <noscript>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
+              <img class="map-position__image" src="img/map.jpg" srcset="img/map@2x.jpg 2x" alt="Седона назодится в Аризоне" width="320" height="350">
+            </picture>
+          </noscript>
       </section>
     </main>
 

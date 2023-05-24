@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона. Фото и Видео</title>
+    <meta name="description" content="Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.">
+    <meta name="theme-color" content="#81b3d2">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 152×152 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -15,7 +18,7 @@
     <!--PAGE HEADER-->
     <header class="page-header page-header--nojs">
       <a class="page-header__link" href="index.html">
-        <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона" width="185" height="96">
+        <img class="page-header__logo" src="img/logo.svg" alt="лого сайта Седона." width="185" height="96">
       </a>
 
       <button class="page-header__toggle" type="button">
@@ -25,7 +28,7 @@
         </svg>
 
         <svg class="page-header__cross" width="23" height="23">
-          <use href="img/sprite.svg#cross-icon">
+          <use href="img/sprite.svg#cross-icon"></use>
         </svg>
       </button>
 
@@ -54,12 +57,12 @@
     <main class="page__main">
       <section class="intro intro--catalog">
         <div class="intro__image-container intro__image-container--inner intro__image-container--catalog">
-          <img class="intro__image" src="img/sedona.svg" alt="Sedona" width="229" height="39">
+          <img class="intro__image" src="img/sedona.svg" alt="Sedona." width="229" height="39">
         </div>
 
         <div class="intro__container">
           <h1 class="intro__title">Фото и видео</h1>
-          <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          <p class="intro__text">Не можете решиться на путешествие из-за курса?&nbsp;<br>Фотографии помогут вам забыть о политике и экономике.</p>
         </div>
       </section>
 
@@ -69,7 +72,7 @@
         <ul class="gallery__list">
           <li class="gallery__item">
             <a class="gallery__photo-link" href="#">
-              <picture>
+              <picture class="gallery__photo-container">
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-catalog-desktop.webp 1x, img/photo-1-catalog-desktop@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-1-catalog-desktop.jpg 1x, img/photo-1-catalog-desktop@2x.jpg 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-catalog-tablet.webp 1x, img/photo-1-catalog-tablet@2x.webp 2x">
@@ -89,12 +92,12 @@
 
           <li class="gallery__item">
             <a class="gallery__photo-link" href="#">
-              <picture>
+              <picture class="gallery__photo-container">
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-catalog-desktop.webp 1x, img/photo-2-catalog-desktop@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-2-catalog-desktop.jpg 1x, img/photo-2-catalog-desktop@2x.jpg 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-catalog-tablet.webp 1x, img/photo-2-catalog-tablet@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-2-catalog-tablet.jpg 1x, img/photo-2-catalog-tablet@2x.jpg 2x">
-                <source type="image/webp" srcset="img/photo-2-catalog.webp 1x, img/photo-1-catalog@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-2-catalog.webp 1x, img/photo-2-catalog@2x.webp 2x">
                 <img class="gallery__photo" src="img/photo-2-catalog.jpg" srcset="img/photo-2-catalog@2x.jpg 2x" alt="Удивительный вид кактуса, похожий на дженгу спустя какое-то время игры." width="280" height="280">
               </picture>
             </a>
@@ -109,7 +112,7 @@
 
           <li class="gallery__item">
             <a class="gallery__photo-link" href="#">
-              <picture>
+              <picture class="gallery__photo-container">
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-3-catalog-desktop.webp 1x, img/photo-3-catalog-desktop@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-3-catalog-desktop.jpg 1x, img/photo-3-catalog-desktop@2x.jpg 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-catalog-tablet.webp 1x, img/photo-3-catalog-tablet@2x.webp 2x">
@@ -129,7 +132,7 @@
 
           <li class="gallery__item">
             <a class="gallery__photo-link" href="#">
-              <picture>
+              <picture class="gallery__photo-container">
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-4-catalog-desktop.webp 1x, img/photo-4-catalog-desktop@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-4-catalog-desktop.jpg 1x, img/photo-4-catalog-desktop@2x.jpg 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-4-catalog-tablet.webp 1x, img/photo-4-catalog-tablet@2x.webp 2x">
