@@ -28,7 +28,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 0 55.5px;
+    padding: 0 0 54.5px;
     margin: 0;
   }
 
@@ -50,7 +50,15 @@
   }
 
   .intro__title {
-    max-width: 264px;
+    margin: 0 auto 37px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 auto 31px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 auto 31px;
+    }
   }
 }
 
@@ -203,13 +211,10 @@
 
   .intro__image {
     @media (min-width: @tablet-width) {
-      min-width: 460px;
-      min-height: 350px;
+      min-width: 461px;
+      min-height: 349.97px;
+      margin: -13px auto 0;
     }
-  }
-
-  .intro__title {
-    margin: 0 auto 37px;
   }
 }
 
