@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   padding: 0 20px;
-  margin-bottom: 22px;
+  margin: 0 0 25px;
 
   font-weight: 700;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 27px;
   text-transform: none;
 
   @media (min-width: @tablet-width) {
@@ -23,14 +23,14 @@
   position: relative;
 
   padding: 0 20px;
-  margin: 0 -20px 49px;
+  margin: 0 -20px 57px;
   border: none;
 
-  &:first-child::before {
+  &:first-child .review-form__title::before {
     content: "";
     position: absolute;
     left: 0;
-    top: -64px;
+    top: -26px;
     height: 1px;
     width: 100%;
     background-color: @input-hover;
@@ -59,8 +59,6 @@
   }
 
   &--contacts {
-    margin-bottom: 59px;
-
     &::after {
       content: "";
       position: absolute;
@@ -94,32 +92,36 @@
   }
 
   &--comment {
-    margin-bottom: 56px;
+    margin-bottom: 36px;
   }
 
   @media (min-width: @tablet-width) {
     &--introduce {
       grid-column: 1/2;
+      padding: 0;
       margin: 0;
     }
 
     &--contacts {
       grid-column: 2/3;
+      padding: 0;
       margin: 0;
     }
 
     &--feelings {
-      margin-bottom: 58px;
+      padding: 0;
+      margin: 0 0 54px;
       border-top: 1px solid @input-hover;
     }
 
     &--attractions {
-      margin-bottom: 52px;
+      margin: 0 0 52px;
       border-top: 1px solid @input-hover;
     }
 
     &--comment {
-      margin-bottom: 48px;
+      padding: 0;
+      margin: 0 0 39px;
       border-top: 1px solid @input-hover;
     }
   }
@@ -134,7 +136,8 @@
     }
 
     &--comment {
-      margin-bottom: 48px;
+      margin: 0 auto 39px;
+      max-width: 768px;
     }
   }
 }
@@ -213,8 +216,7 @@
     &--feelings {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 36px 16px;
+      gap: 36px 50px;
       padding: 0 36px;
     }
 
@@ -229,7 +231,7 @@
 
   @media (min-width: @desktop-width) {
     &--feelings {
-      gap: 36px 28px;
+      gap: 36px 64px;
       padding: 0 53px;
     }
 
@@ -237,8 +239,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 20px 0;
-      padding: 0 44.5px;
+      gap: 36px 20px;
+      padding: 0 25px;
       max-width: none;
     }
   }
@@ -317,7 +319,8 @@
 
   &--phone,
   &--email {
-    padding-right: 70px;
+    padding: 16px 70px 16px 16px;
+    width: 100%;
   }
 
   &:placeholder-shown {
@@ -342,7 +345,9 @@
 }
 
 .review-form__textarea {
+  min-width: 279px;
   width: 100%;
+  min-height: 150px;
   padding: 16px;
   border: none;
 
@@ -377,10 +382,13 @@
 .review-form__footer {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 768px;
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 1fr;
+    gap: 20px;
   }
 }
 
@@ -395,13 +403,18 @@
 }
 
 .review-form__required-description {
-  margin-left: auto;
+  margin: 0 0 0 auto;
   align-self: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
   color: fade(@text-secondary, 60%);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    margin: 6px 0 0 auto;
+  }
 }
 
 /* CONTROL-MARK */

@@ -1,6 +1,7 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
@@ -13,7 +14,7 @@
 }
 
 .gallery__list {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   list-style: none;
 
@@ -32,7 +33,9 @@
 }
 
 .gallery__item {
-  padding: 24px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px 26px;
   border-bottom: 1px solid #e5e5e5;
 
   &:first-child {
@@ -45,16 +48,24 @@
 
     &:first-child {
       grid-column: 1/-1;
+      border: none;
     }
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
+
+    &:not(:first-child) {
+      .gallery__photo-info {
+        padding: 17px 21px 17px 25px;
+      }
+    }
   }
 }
 
 .gallery__photo-link {
-  display: block;
+  display: flex;
+  flex-grow: 1;
   margin: 0 0 15px;
 
   @media (min-width: @tablet-width) {
@@ -62,9 +73,22 @@
   }
 }
 
+.gallery__photo-container {
+  display: flex;
+  flex-grow: 1;
+}
+
 .gallery__photo {
   display: block;
+  flex-grow: 1;
   width: 100%;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    &:not(:first-child) {
+      min-height: 267px;
+    }
+  }
 }
 
 
@@ -86,22 +110,26 @@
     bottom: 0;
 
     background-color: fade(#000000, 30%);
-
-    &:not(:first-child) {
-      padding: 17px 25px;
-    }
   }
 }
 
 .gallery__info-text {
-  margin: 0 0 11px;
+  margin: 0 0 16px;
   font-size: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .gallery__title {
   margin: 0;
   font-weight: 700;
   font-size: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 1px;
+  }
 }
 
 .gallery__text {
@@ -126,6 +154,11 @@
 
     mask-image: url("../img/sprite.svg#like-icon");
     background-color: fade(@text-main, 30%);
+
+    @media (min-width: @tablet-width) {
+      left: 4px;
+      bottom: 4px;
+    }
 
     @media (min-width: @desktop-width) {
       background-color: @text-contrast;

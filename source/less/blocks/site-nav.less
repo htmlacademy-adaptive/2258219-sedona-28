@@ -90,7 +90,7 @@
 
   @media (min-width: @tablet-width) {
     width: 20%;
-    padding: 17px 0 12px;
+    padding: 18px 10px 17px;
     background-color: unset;
 
     &:hover,
@@ -115,8 +115,8 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
-  line-height: 26px;
-  padding: 17px 49px 12px; //49px для безопасного отступа от кнопки
+  line-height: 27px;
+  padding: 17px 49px 12px;
 
   &:hover {
     background-color: @main-hover;
@@ -128,7 +128,7 @@
   }
 
   &--current {
-    color: rgba(255, 255, 255, 0.6);
+    color: fade(@text-contrast, 60%);
     cursor: default;
 
     &:hover {
@@ -151,12 +151,12 @@
 
     &:hover {
       background-color: @main-bcg;
-      color: fade(#766357, 60%);
+      color: @main-color;
     }
 
     &:active {
       background-color: @main-bcg;
-      color: fade(#766357, 30%);
+      color: fade(@text-main, 30%);
     }
 
     &--current {
